@@ -1,0 +1,247 @@
+########################################################
+# Package VL53LX ReleaseNotes: 1.2.10 rev 2610
+########################################################
+
+-- Ewok LX Mass Market Bare Driver
+
+	Issues fixed in this version:
+	- Fix ticket #1143706 error 4 happen after calibration data loading
+	  Fix didn't actually applied at the file merging
+
+Documentation .chm file updated
+
+########################################################
+# Package VL53LX ReleaseNotes: 1.2.9 rev 2602
+########################################################
+
+-- Ewok LX Mass Market Bare Driver
+
+	Issues fixed in this version:
+	- Fix ticket #1143706 error 4 happen after calibration data loading
+	- Fix ticket #1161077 Bare driver change to optimize live smudge correction
+	- Fix ticket #1161076 Bare driver change to fix corner case when new near target move into field of view
+	- Fix potential issue when refspad calibration fails
+	  The WA to set again the preset mode as it was at the entry in the function must be called in all cases without any condition
+
+Documentation .chm file updated
+
+########################################################
+# Package VL53LX ReleaseNotes: 1.2.8 rev 2578
+########################################################
+
+-- Ewok LX Mass Market Bare Driver
+
+	Issues fixed in this version:
+	- Fix ticket #978205 VL53L3 Linux Driver abnormal live cross talk update
+	- Extended range can't work with multiple targets in the Fov (leads to false target detection)
+
+Documentation .chm file updated
+
+########################################################
+# Package VL53LX ReleaseNotes: 1.2.7 rev 2564
+########################################################
+
+-- Ewok LX Mass Market Bare Driver
+
+	Issues fixed in this version:
+	- Removed specific fix for ticket #852750 "Target disappears at 50cm on white target" 
+	  because fix for ticket #952063 "Detection rate drop fix" estimating ambient using both methods always is enough
+	  Actually, maintaining the fix for ticket #852750 "Target disappears at 50cm on white target" based on signal value 
+	  and #of enabled spads introduced regressions with the fix for ticket #952063	 
+	- Fix -4 issue within DataInit on vl53lx bare driver
+	- Removed VL53LX_wait_for_firmware_ready() as TIMED or SINGLE mode are not available in VL53LX bare driver (only histogram ranging)
+	  TIMED preset mode is not available in VL53LX so TIMED mode related features have been removed:
+		Check timing configuration between timing budget and inter measurement period in VL53LX_StartMeasurement()
+		Set/GetInterMeasurementPeriod static functions in vl53lx_api.c
+
+Documentation .chm file updated
+
+########################################################
+# Package VL53LX ReleaseNotes: 1.2.6 rev 2550
+########################################################
+
+-- Ewok LX Mass Market Bare Driver
+
+	Issues fixed in this version:
+	- Fix ticket VL53L1AppTracker #743124 Power consumption too high in SD mode
+	- Fix ticket #952063 Detection rate drop fix
+		Adapt amb_threshold_sigma to  number of histograms merged when signal rate is >= 2Mcps with 90% of spads enabled
+		Estimate ambient using both methods always
+
+	treat root causes for potential NULL or out of bound pointers 
+	Cleanup distance mode documentation (VL53L1_DISTANCEMODE_AUTO_LITE & VL53L1_DISTANCEMODE_AUTO is no more existing)
+
+Documentation .chm file updated
+
+########################################################
+# Package VL53LX ReleaseNotes: 1.2.5 rev 2524
+########################################################
+
+-- Ewok LX Mass Market Bare Driver
+
+Issues fixed in this version:
+	- Fix ticket EwokP Fix ticket #852750 Target disappears at 50cm on white target 
+	- Fix ticket #846605 Incomplete calibration data on VL53L3_Maint6 in ZTE
+
+Documentation .chm file updated
+
+########################################################
+# Package VL53LX ReleaseNotes: 1.2.4 rev 2498
+########################################################
+
+-- Ewok LX Mass Market Bare Driver
+
+Issues fixed in this version:
+	- Fix ticket EwokP #828149 ranging distance extension fails with multiple targets
+	- added L4 default tuning parameters (add -DVL53L4 compile flag to use it instead of L3CX one)
+
+Documentation .chm file updated
+
+########################################################
+# Package VL53LX ReleaseNotes: 1.2.3 rev 2488
+########################################################
+
+-- Ewok LX Mass Market Bare Driver
+
+Issues fixed in this version:
+	- Fix for ewokplus tracker #808054 NVM offset data for lensless sensors
+	- Fix for ewokplus tracker #823926: disable smudge correction by default
+	- Fix VL53LX_SetDeviceAddress : propagate the new i2c address to the pdev->stat_nvm structure to align lldata with platform settings
+
+Documentation .chm file updated
+
+########################################################
+# Package VL53LX ReleaseNotes: 1.2.2 rev 2472
+########################################################
+
+-- Ewok LX Mass Market Bare Driver
+
+Issues fixed in this version:
+	- Fix ticket EwokP #788260 Need for SetUserROI function in vl53lx driver
+	- Fix ticket EwokP #788254 Customer reported crash in LLDriver Ticket
+	- Fix ticket EwokP #788511 Need for "Dev" parameter in platform's GetTickCount() function Ticket 
+
+Important note : the prototype of the platform function VL53LX_GetTickCount() has changed with the addition of VL53LX_Dev_t *pdev parameter
+Implementation must be modified accordingly either taking advantage of pdev either ignoring pdev at the beginning of the customer's function:
+(void) pdev;
+
+Documentation .chm file updated
+
+########################################################
+# Package VL53LX ReleaseNotes: 1.2.1 rev 2454
+########################################################
+
+-- Ewok LX Mass Market Bare Driver
+
+Issues fixed in this version:
+	Issues fixed in this version:
+	- Fix ticket EwokP #76000 Google needs for all source code dual licensing
+	- Fix ticket EwokP #760301 Stack corruption risk
+
+Documentation .chm file updated
+
+########################################################
+# Package VL53LX ReleaseNotes: 1.2.0 rev 2422
+########################################################
+
+-- Ewok LX Mass Market Bare Driver
+
+Issues fixed in this version:
+	Issues fixed in this version:
+	- Fix ticket EwokP #724974 Maint6 API change request
+	Implementation of extended ranging to increase the maximum distance ranging thanks to mixing range A and range B under some conditions
+	Extended ranging is enabled by default in tuning params
+	- Fix ticket EwokP #725947 "legacy" Xtalk value reported in calibration  data shall not vary due to histogram merging
+
+Documentation .chm file updated
+
+########################################################
+# Package VL53LX ReleaseNotes: 1.1.5 rev 2405
+########################################################
+
+-- Ewok LX Mass Market Bare Driver
+
+Issues fixed in this version:
+- reduce abnormal stack usage in nvm read functions, the buffer size was doubled due to outdated ncsim requirements
+
+Documentation .chm file updated
+
+########################################################
+# Package VL53LX ReleaseNotes: 1.1.4 rev 2352
+########################################################
+
+-- Ewok LX Mass Market Bare Driver
+
+Issues fixed in this version:
+- Compute average signal and ambient when histogram merging is enabled
+- Prevent smudge correction when xtalk calculated is too far from current one.
+  new tuning param for that  VL53LX_TUNINGPARM_DYNXTALK_MAX_SMUDGE_FACTOR (default 2000 for x2 factor)
+- Reworked some code to match 80 columns checkpatch rule
+
+Documentation .chm file available
+
+########################################################
+# Package VL53LX ReleaseNotes: 1.1.3 rev 2344
+########################################################
+
+-- Ewok LX Mass Market Bare Driver
+
+Tickets fixed in this version:
+682527: old WA for bug 558410 alters a very special Xtalk calibration usage
+682540: Minor vl53lx Harmless warnings should be corrected
+688148: Major changes in calibration structure were not properly versioned
+	- Upgraded ADDITIONAL_CALIBRATION_DATA_STRUCT_VERSION value to ease calibration data transfer
+688569: Minor Remove the 2 frame delay to start histogram merge
+688841: Blocking Histogram merging infers unexpected calibration data changes
+
+Documentation .chm file available
+
+########################################################
+# Package VL53LX ReleaseNotes: 1.1.2 rev 2339
+########################################################
+
+-- Ewok LX Mass Market Bare Driver
+internal delivery L3CX release 1.1.2_2339 to fix ticket 682540 : vl53lx Harmless warnings should be corrected
+no testing, nor documentation updates, application team urgently needs for ODE c-static code checking
+
+other fixes committed as is
+TUNING_PHASECAL_PATCH_POWER enabled for lite driver
+fix ticket 688569 : Remove the 2 frame delay to start histogram merge
+fix ticket 688148 : changes in calibration structure were not properly versioned
+ - Upgraded ADDITIONAL_CALIBRATION_DATA_STRUCT_VERSION value to ease calibration data transfer
+
+Documentation .chm file available
+
+########################################################
+# Package VL53LX ReleaseNotes: 1.1.1 rev 2320
+########################################################
+
+-- Ewok LX Mass Market Bare Driver
+	* Fix in Xtalk with histogram merging feature: wrong timing parity detected
+
+Documentation .chm file available
+
+########################################################
+# Package VL53LX ReleaseNotes: 1.1.0 rev 2310
+########################################################
+
+-- Ewok LX Mass Market Bare Driver
+Histogram ranging features enhanced for Mass Market based on release L3 maint5
+
+	Tuning parameters to enable histogram merging and select its action threshold
+	VL53LX_TUNINGPARM_HIST_MERGE 0 disable or 1 enable (enabled by default)
+	VL53LX_TUNINGPARM_RESET_MERGE_THRESHOLD (1500 by default)
+	VL53LX_TUNINGPARM_HIST_MERGE_MAX_SIZE (depth of the merging valid values [1..6], set to 6 by default)
+
+Documentation .chm file available
+
+
+########################################################
+# Package VL53LX ReleaseNotes: 1.0.0 rev 2274
+########################################################
+
+-- Ewok LX Mass Market Bare Driver
+Histogram ranging features for Mass Market based on release L3 maint5
+
+Documentation .chm file available
+

@@ -1,0 +1,1766 @@
+########################################################
+# Package ReleaseNotes: 6.6.15 rev 2625
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	Issues fixed in this version:
+	- Fix regression (Status value override) due to fix for ticket EwokP #1143706
+
+Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.6.14 rev 2622
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	Issues fixed in this version:
+	- Fix ticket #1201956 work around for DSS update with Multi-ROI mode VL53L1
+	- Fix ticket #1199585 Bare driver change to extended range & histogram merge used on Multi ROI attribute 
+	- Fix ticket #1193907 Some VL53L1CB optical center coordinate offset exceeds the datasheet spec
+
+Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.6.13 rev 2608
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	Issues fixed in this version:
+	- Fix ticket #1143706 error 4 happen after calibration data loading
+	  Fix didn't actually applied at the file merging
+
+Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.6.12 rev 2600
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	Issues fixed in this version:
+	- Fix ticket #1143706 error 4 happen after calibration data loading
+	- Fix ticket #1161077 Bare driver change to optimize live smudge correction
+	- Fix ticket #1161076 Bare driver change to fix corner case when new near target move into field of view
+	- Fix potential issue when refspad calibration fails
+	  The WA to set again the preset mode as it was at the entry in the function must be called in all cases without any condition
+
+Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.6.11 rev 2576
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	Issues fixed in this version:
+	- Fix ticket #978205 VL53L3 Linux Driver abnormal live cross talk update
+	- Extended range can't work with multiple targets in the Fov (leads to false target detection)
+
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.6.10 rev 2562
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	Issues fixed in this version:
+	- Removed specific fix for ticket #852750 "Target disappears at 50cm on white target" 
+	  because fix for ticket #952063 "Detection rate drop fix" estimating ambient using both methods always is enough
+	  Actually, maintaining the fix for ticket #852750 "Target disappears at 50cm on white target" based on signal value 
+	  and #of enabled spads introduced regressions with the fix for ticket #952063	 
+
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.6.9 rev 2554
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	Issues fixed in this version:
+	- Fix ticket [VL53L1AppTracker #952706] SPAD Count issue in SD mode
+
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.6.8 rev 2546
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	Issues fixed in this version:
+	- Fix ticket VL53L1AppTracker #743124 Power consumption too high in SD mode
+	- Fix ticket #952063 Detection rate drop fix
+		Adapt amb_threshold_sigma to  number of histograms merged when signal rate is >= 2Mcps with 90% of spads enabled
+		Estimate ambient using both methods always
+
+	treat root causes for potential NULL or out of bound pointers 
+	Cleanup distance mode documentation (VL53L1_DISTANCEMODE_AUTO_LITE & VL53L1_DISTANCEMODE_AUTO is no more existing)
+
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.6.7 rev 2536
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	Issues fixed in this version:
+	- Fix ticket EwokP #872050 Tuning parameter for signal of secondaries target
+ 
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.6.6 rev 2522
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	Issues fixed in this version:
+	- Fix ticket EwokP Fix ticket #852750 Target disappears at 50cm on white target 
+	- Fix ticket #846605 Incomplete calibration data on VL53L3_Maint6 in ZTE
+
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.6.5 rev 2496
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	Issues fixed in this version:
+	- Fix ticket EwokP #788511 Need for "Dev" parameter in platform's GetTickCount() function 
+	- Fix ticket EwokP #788254 Customer reported crash in LLDriver
+	- Fix ticket EwokP #823926 disable smudge correction by default
+	- Fix ticket EwokP #828149 ranging distance extension fails with multiple targets
+	- Fix VL53L1_SetDeviceAddress : propagate the new i2c address to the pdev->stat_nvm structure to align lldata with platform settings
+
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.6.4 rev 2462
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	Issues fixed in this version:
+	- Fix ticket EwokP #760000 Google needs for all source code dual licensing
+
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.6.3 rev 2448
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	Issues fixed in this version:
+	- Fix ticket EwokP #760000 Google needs for all source code dual licensing
+	- Fix ticket EwokP #760301 Stack corruption risk
+
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.6.1 rev 2432
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	Issues fixed in this version:
+	- Fix ticket EwokP #724974 Maint6 API change request
+	Take advantage of the extended ranging for VL53L1 with new tunings, we can range up to  8 meters in darkroom !
+
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.6.0 rev 2412
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	Issues fixed in this version:
+	- Fix ticket EwokP #724974 Maint6 API change request
+	Implementation of extended ranging to increase the maximum distance ranging thanks to mixing range A and range B under some conditions
+	Extended ranging is enabled by default in tuning params
+	- Fix code to prevent histogram merging usage but for histogram ranging (disabled for multizone scanning)
+	- Fix ticket EwokP #725947 "legacy" Xtalk value reported in calibration  data shall not vary due to histogram merging
+
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.5.4 rev 2404
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	Issues fixed in this version:
+	- reduce abnormal stack usage in nvm read functions, the buffer size was doubled due to outdated ncsim requirements
+
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.5.3 rev 2400
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	Issues fixed in this version:
+	- Fix ticket EwokP #711709 : change SetCalibrationData to cope with old calibration data structure (main target is maint3)
+
+	- FULL KERNEL driver build (no daemon) is now supported for L1 & L3 
+		Change some division in protected files to allow to put them in kernel module for linux driver
+		Add a new setting file ewokplus_bare_driver_proprietary.py for obfuscation to set all non public files in 'ST proprietary'
+			The obfuscation script must be invoqued as following : 
+			python obfuscate.py -s ewokplus_bare_driver_proprietary
+			python cleanup_full_bare_driver_delivery.py
+		
+	- Split tuning params in 2 files for L1 and L3 and add a VL53L3 compilation flag to select target chip
+		if VL53L3 defined : build the VL53L1 bare driver for L3 silicon with L3 default tuning parameters (file l3_tuning_params.h included)
+		else : build the VL53L1 bare driver for L1 silicon with L1 default tuning parameters (file l1_tuning_params.h included)
+	
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.5.2 rev 2372
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	Issues fixed in this version:
+	- Fix ticket EwokP #711709 : change SetCalibrationData to cope with old calibration data structure (main target is maint3)
+	- Fix harmless warning issue in VL53L1_GetDmaxMode() function
+	
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.5.1 rev 2350
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	Issues fixed in this version:
+	- Compute average signal and ambient when histogram merging is enabled
+	- Prevent smudge correction when xtalk calculated is too far from current one.
+	new tuning param for that  VL53LX_TUNINGPARM_DYNXTALK_MAX_SMUDGE_FACTOR (default 2000 for x2 factor)
+	- Reworked some code to match 80 columns checkpatch rule
+	
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.5.0 rev 2346
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	* Main Fixes in Xtalk with histogram merging feature: 
+	"legacy" smudge correction was no more working if the VL53L1_TUNINGPARM_HIST_MERGE was set to 0 (disable)
+	Calibration data structure version updated
+	
+	* tickets fixed in this version
+	682527: old WA for bug 558410 alters a very special Xtalk calibration usage
+	688148: Major changes in calibration structure were not properly versioned
+		- Upgraded ADDITIONAL_CALIBRATION_DATA_STRUCT_VERSION value to ease calibration data transfer
+	688569: Minor Remove the 2 frame delay to start histogram merge
+	688841: Blocking Histogram merging infers unexpected calibration data changes
+	
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.4.2 rev 2316
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	* Fix in Xtalk with histogram merging feature: wrong timing parity detected
+
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.4.1 rev 2300
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	* LL driver is now maintained in same directory as the bare driver, no more external links
+	
+	* Fix in histogram merging feature: bad index usage
+
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.4.0 rev 2288
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	* Include LL driver version branches/branch_1.1.48.12224_HistogramMerge/design_api_source
+	
+	* Cleanup XtalkFullROI which may lead to unexpected huge Xtalk value in case of high ambient
+	* Updated  histogram merging feature (enabled by default) to enhance max distance ranging
+		Histogram merging feature shall be combined to the FullROI Xtalk calibration mode to give good results
+		FullROI xtalk is now performed on several points to match merging depth set by VL53L1_TUNINGPARM_HIST_MERGE_MAX_SIZE tuning param
+		Caution, this addition alters 
+			- content of VL53L1_DevData_t structure
+			- prototype of the function VL53L1_ipp_hist_process_data()
+		libraries & application be rebuilt accordingly.
+		
+		New tuning parameters added to enable histogram merginig and select its action threshold
+		VL53L1_TUNINGPARM_HIST_MERGE 0 disable or 1 enable
+		VL53L1_TUNINGPARM_RESET_MERGE_THRESHOLD (1000 by default)
+		VL53L1_TUNINGPARM_HIST_MERGE_MAX_SIZE (depth of the merging valid values [1..6], set to 6 by default)
+		
+	* Smudge correction also take advantage of the FullROI Xtalk calibration mode when it has been performed
+
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.3.0 rev 2277
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	* Include LL driver version branches/branch_1.1.48.12223_HistogramMerge/design_api_source
+	
+	* Removed erroneous sigma & signal_rate limits settings from VL53L1_DataInit() function
+	* Added histogram merging feature (enabled by default) to enhance max distance ranging
+		Caution, this addition alters the content of VL53L1_DevData_t structure then application must 
+		be rebuilt accordingly.
+		New tuning parameters added to enable histogram merginig and select its action threshold
+		VL53L1_TUNINGPARM_HIST_MERGE 0 disable or 1 enable
+		VL53L1_TUNINGPARM_RESET_MERGE_THRESHOLD (5 by default)
+
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.2.4 rev 2230
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	* Include LL driver version branches/branch_1.1.48.12219_FW398_Fix_AmbientNoTarget_3_lowstack3/design_api_source
+	
+	* Codex tickets fixed in this version
+		#600448 Add funtion to perform zero distance offset calibration
+		#596097 output the spadCount when no target detected 
+		#596094 patch for phase calibration to be modified 
+		#596091 add an offset correction mode and use it to correct the offset per VCSEL period
+
+		New offset calibration function added VL53L1_PerformOffsetZeroDistanceCalibration(VL53L1_DEV Dev)
+			Uses a new tuning parameter VL53L1_TUNING_ZERO_DISTANCE_OFFSET_NON_LINEAR_FACTOR(11) with default value = 9
+		New offset calibration function added VL53L1_PerformOffsetPerVcselCalibration(VL53L1_DEV Dev, int32_t CalDistanceMilliMeter)
+		New offset compensation parameter to use per vcsel calibration : VL53L1_OFFSETCORRECTIONMODE_PERVCSEL 
+		New tuning parameter added to select the level of the phasecal
+		duration VL53L1_TUNINGPARM_PHASECAL_PATCH_POWER
+
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.2.3 rev 2224
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+!!!NOTE : this version was intermediate release not for delivery to customers !!!
+	* Include LL driver version branches/branch_1.1.48.12219_FW398_Fix_AmbientNoTarget_3_lowstack3/design_api_source
+	
+	* Codex tickets fixed in this version
+		#596097 output the spadCount when no target detected 
+		#596094 patch for phase calibration to be modified 
+		#596091 add an offset correction mode and use it to correct the offset per VCSEL period
+
+		New offset calibration function added VL53L1_PerformOffsetPerVcselCalibration(VL53L1_DEV Dev, int32_t CalDistanceMilliMeter)
+		New offset compensation parameter to use per vcsel calibration : VL53L1_OFFSETCORRECTIONMODE_PERVCSEL 
+		New tuning parameter added to select the level of the phasecal
+		duration VL53L1_TUNINGPARM_PHASECAL_PATCH_POWER
+
+	* Documentation .chm file updated
+########################################################
+# Package ReleaseNotes: 6.2.2 rev 2210
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	* Include LL driver version branches/branch_1.1.48.12219_FW398_Fix_AmbientNoTarget_3_lowstack2/design_api_source
+
+	* Codex tickets fixed in this version
+		EwokP #592728 Change PhaseCal duration to reduce measurments jittering
+		New tuning parameter added to select the level of the phasecal
+		duration VL53L1_TUNING_PHASECAL_PATCH_POWER
+
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.2.1 rev 2196
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	* Include LL driver version branches/branch_1.1.48.12219_FW398_Fix_AmbientNoTarget_3_lowstack2/design_api_source
+
+	* Codex tickets fixed in this version
+		VL53L1AppTracker #568494 Add API function to read unique ID of each sensor
+		VL53L1AppTracker #561619 Out of window interrupt fail (low power autonomous mode)
+		EwokP #558410 recover too high ambient results in full ROI Xtalk calculation
+
+	* Documentation .chm file updated
+
+
+########################################################
+# Package ReleaseNotes: 6.2.0 rev 2160
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	* Include LL driver version branches/branch_1.1.48.12219_FW398_Fix_AmbientNoTarget_3_lowstack2/design_api_source
+
+	* Codex tickets fixed in this version
+		VL53L1AppTracker #527669 stack overflow issue
+
+Beware, VL53L1_ipp_hist_process_data() fucntion now needs for 2 additionnal fields in its prototype
+	uint8_t *pArea1,
+	uint8_t *pArea2,
+Take care to modifiy the platform dependant implementation in customers' vl53l1_platform_ipp.c source code adaptation
+
+
+########################################################
+# Package ReleaseNotes: 6.1.1 rev 2129
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	* Include LL driver version branches/release_1.1.48.12219_FW398_Fix_AmbientNoTarget_3/design_api_source
+
+	* Codex tickets fixed in this version
+		EwokP #537816 Unexpected Error VL53L1_ERROR_GPH_SYNC_CHECK_FAIL on L1X
+
+
+########################################################
+# Package ReleaseNotes: 6.1.0 rev 2120
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	* Include LL driver version branches/release_1.1.48.12219_FW398_Fix_AmbientNoTarget_3/design_api_source
+
+	Warning !!! To reflect changes in FMT process occured in May 2017 the Dmax mode is now set to customer calibration by default in the bare driver instead of FMT calibrated
+
+	* fix recommended distance mode calculation for ewok EVO VL53L3
+	  it was failing because of the lack of DMax calibration in FMT process
+
+	* Codex tickets fixed in this version
+		VL53L1AppTracker #522606 the DMAX mode usage needed to updated for Ewokplus
+		VL53L1AppTracker #519263 to get device ID by VL53L1_GetDeviceInfo (returns VL53L1 or VL53L3 according to device type)
+
+
+########################################################
+# Package ReleaseNotes: 6.0.5 rev 2068
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	* Include LL driver version branches/release_1.1.48.12219_FW398_Fix_AmbientNoTarget_3/design_api_source
+
+	* Codex tickets fixed in this version
+		report range_status = 255 in case of no object detected in histogram ranging
+		EwokP #514537 Returned data value change request when no  target is detected
+
+	* Codex tickets fixed in release_1.1.48.12219_FW398_Fix_AmbientNoTarget inherited from his version
+		VL53L1AppTracker #511869 range data is not cleaned when no object is detected
+		*REWORKED* Ambient rate calculation when no target has been detected in histogram mode
+		EwokP #514532 Status returned by VL53L1_data_init() is  altered
+		VL53L1AppTracker #514545 [VL53L1] default tuning parameters change
+
+
+########################################################
+# Package ReleaseNotes: 6.0.4 rev 2061
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	* Include LL driver version branches/release_1.1.48.12219_FW398_Fix_AmbientNoTarget_2/design_api_source
+
+	* Codex tickets fixed in this version
+		report range_status = 255 in case of no object detected in histogram ranging
+		EwokP #514537 Returned data value change request when no  target is detected
+
+	* Codex tickets fixed in release_1.1.48.12219_FW398_Fix_AmbientNoTarget inherited from his version
+		VL53L1AppTracker #511869 range data is not cleaned when no object is detected
+		Added Ambient rate calculation when no target has been detected in histogram mode
+		EwokP #514532 Status returned by VL53L1_data_init() is  altered
+		VL53L1AppTracker #514545 [VL53L1] default tuning parameters change
+
+########################################################
+# Package ReleaseNotes: 6.0.3 rev 2057
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	* Include LL driver version branches/release_1.1.48.12219_FW398_Fix_AmbientNoTarget/design_api_source
+
+	* Codex tickets fixed in this version
+		report range_status = 255 in case of no object detected in histogram ranging
+
+	* Codex tickets fixed in release_1.1.48.12219_FW398_Fix_AmbientNoTarget inherited from his version
+		VL53L1AppTracker #511869 range data is not cleaned when no object is detected
+		Added Ambient rate calculation when no target has been detected in histogram mode
+
+
+########################################################
+# Package ReleaseNotes: 6.0.2 rev 2035
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	* Include LL driver version tags/1.1.47.12216_FW398/design_api_source
+
+	* Codex tickets fixed in this version
+  EwokP #501325 histogram processing stack optimization
+  VL53L1AppTracker #501305 Stack overflow on Intel ISH with EwokPlus full driver
+
+ * Codex tickets fixed in 1.1.47.12216_FW398 inherited from his version
+		EwokP #501102 rebase low level driver in DesignSync
+
+
+########################################################
+# Package ReleaseNotes: 6.0.1 rev 2003
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	* Include LL driver version branches/release_1.1.46_FW398_fixes_485783_497949_checkpatch-2/design_api_source
+
+	* Codex tickets fixed in this version
+		EwokP #398213  Request for making the code "checkpatch clean"
+
+  Additionnal cleanup for remaining checkpatch issues against kernel 4.14
+
+
+########################################################
+# Package ReleaseNotes: 6.0.0 rev 1957
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	* Include LL driver version branches/release_1.1.46_FW398_fixes_485783_497949_checkpatch/design_api_source
+
+	* Codex tickets fixed in this version
+		EwokP #398213  Request for making the code "checkpatch clean"
+
+
+########################################################
+# Package ReleaseNotes: 5.1.9 rev 1944
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	* Include LL driver version branches/release_1.1.46_FW398_fixes_485783_497949/design_api_source
+ fix for bug #497949 dual reflectance Xtalk uses too huge data amount and looks bugged
+ Unused code removed from the lld
+
+	* Codex tickets fixed in this version
+		#456074 Why does the API have files and functions for a FPGA System
+
+
+########################################################
+# Package ReleaseNotes: 5.1.8 rev 1888
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	* Include LL driver version branches/release_1.1.46_FW398_fix_485783/design_api_source
+ #485783	rounding calculation issue in VL53L1_range_maths (limited to the patch than tested during our HWE debug session)
+
+
+
+########################################################
+# Package ReleaseNotes: 5.1.7 rev 1886
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	* Include LL driver version branches/release_1.1.45.12207_FW398_fix_485783/design_api_source
+ #485783	rounding calculation issue in VL53L1_range_maths (limited to the patch than tested during our HWE debug session)
+
+ Due to bad handling of svn references the previous version wasn't actually based on lld branches/release_1.1.45.12207_FW398_fix_485783
+
+########################################################
+# Package ReleaseNotes: 5.1.6 rev 1871
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	* Include LL driver version branches/release_1.1.45.12207_FW398_fix_485783/design_api_source :
+
+	* Codex tickets fixed in this version
+		#486967	Check timing mode coherency in TIMED mode
+		#485745	Add a loop in SimpleOffsetCalibration function
+		#468205	Measured Inter measurement period is 10% shorter than the value set
+		#476869	Code is not fully portable on 8 or 16bits micro chips
+		#484546	first sample of simple offset calibration is wrong
+		#487847	change VL53L1_TUNINGPARM_DYNXTALK_NODETECT_XTALK_OFFSET_KCPS updates
+
+	fix in lld branch release_1.1.45.12207_FW398_fix_485783 :
+		#485783	rounding calculation issue in VL53L1_range_maths (limited to the patch than tested during our HWE debug session)
+
+
+########################################################
+# Package ReleaseNotes: 5.1.5 rev 1857
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	* Include LL driver version tags/release_1.1.45.12207_FW398 :
+
+	* Codex tickets fixed in this version
+		#484546 : first sample of simple offset calibration is wrong
+		#484539 : rounding issue in simple offset calibration
+
+A slight change in some user define's macros naming are requested from the bare driver
+Your vl53l1_platform_user_data.h file must now define macros VL53L1DevDataGet() & VL53L1DevDataSet()
+instead of the PALDevDataGet() & PALDevDataSet() used before. No change in their semantic just rename them
+
+
+########################################################
+# Package ReleaseNotes: 5.1.4 rev 1828
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	* Include LL driver version tags/release_1.1.45.12207_FW398 :
+   New method for the calculation of the Xtalk with target at 60 cm
+
+	* Codex tickets fixed in this version
+		#477783 VL53L1_PerformXTalkCalibration() forces -70 +70 mm as valid range for Xtalk calibration
+  #479022 New Xtalk calibration mode support VL53L1_XTALKCALIBRATIONMODE_FULL_ROI
+
+usage of the new Xtalk calibration option:
+VL53L1_XTALKCALIBRATIONMODE_FULL_ROI the calibration sets appropriate preset and distance mode and thus override existing ones.
+User must call VL53L1_SetPresetMode() again after calibration to set the desired one.
+The ROI settings must define a single 16x16 ROI before to launch this function. The calibration uses a target
+which should be located at least @600mm up to 3000mm from the device.
+The actual location of the target shall be passed through the bare driver tuning parameters table
+
+
+########################################################
+# Package ReleaseNotes: 5.1.3 rev 1803
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	* Include LL driver version branches/release_1.1.43.12193_FW398_fix_Xtalk
+
+	* Codex tickets fixed in this version
+		#477783 VL53L1_PerformXTalkCalibration() forces -70 +70 mm as valid range for Xtalk calibration
+		#475395 Compilation warning due to an uninitialized variable
+
+  fixes in LLD branches/release_1.1.43.12193_FW398_fix_Xtalk:
+  - Fix bad rounding calculation in VL53L1_hist_calc_bin_align_offset()
+  - Added check to reject invalid target in  VL53L1_dynamic_xtalk_correction_corrector()
+
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 5.1.2 rev 1792
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	* Include LL driver version tags/release_1.1.43.12193_FW398
+
+	* Codex tickets fixed in this version
+		#470042 Fix Compilation Warning codex
+
+  Added examples nucleo STM32 support
+  Added doc files from application team (update will remain under application team responsibility)
+  Added legal notice header in examples source code
+
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 5.1.1 rev 1767
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	* Include LL driver version tags/release_1.1.43.12193_FW398
+
+	* Codex tickets fixed in this version
+		#466238 Apply invert distance gain to thresholds
+		#466282 RefSpad management error/warning -29
+
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 5.1.0 rev 1733
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	* Include LL driver version tags/release_1.1.43.12193_FW398
+
+ * added VL53L1_PerformOffsetSimpleCalibration() function
+ * Xtalk correction offset are not applied in case of VL53L1_ERROR_XTALK_EXTRACTION_NO_SAMPLE_FAIL error
+	* Codex tickets fixed in this version
+		#456306 For Low Power Auto mode, when MM offset is copied
+  to algo part to part, need to shift it up by two (for fractional .2 format)
+
+	* Documentation .chm file updated
+
+
+
+########################################################
+# Package ReleaseNotes: 5.0.0 rev 1725
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	* Include LL driver version tags/release_1.1.42.12187_FW398
+
+	* Codex tickets fixed in this version
+		#446555 Default number of Max ROI should be set to 16 (LLD)
+		#449922 initial data range status set to hardcoded -1 value
+		#456189 Meas. timing budget shall be limited to 550 ms maximum
+		#450018 VL53L1 driver does not compile with C++ compiler
+		#456674 Dynamic distance mode selection: Make Timing Budget Vary
+		#435553 Range status output in histo NO_WRAP_CHECK only visible once (fixed by bare driver documentation)
+  #456160 LiveXtalkVariation does not work with Xtalk ~450kcps/spad
+		#458793 Common fields between objects of the same range
+
+	* Some data structure changes in API related to codex #458793.
+ 		Please pay attention to the porting guide in the documentation folder of this release : APIPortingGuideforMaintenance2TC2.docx
+
+	* Documentation .chm file updated
+
+
+########################################################
+# Package ReleaseNotes: 4.4.6 rev 1697
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	* Include LL driver version tags/release_1.1.40.12176_FW398
+ * Auto distance mode : Driver recommends the best distance mode in histogram based rangings through the new field .VL53L1_RangingMeasurementData_t.RecommendedDistanceMode
+
+	* Documentation .chm file updated
+
+
+########################################################
+# Package ReleaseNotes: 4.4.5 rev 1626
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+ * This version stands for lite driver (low footprint) production version
+	* Include LL driver version tags/release_1.1.37.12156_FW398
+	* Include small footprint LL driver version tags/release_1.2.3.47_lf
+	* Clean up lite driver and verification tests
+
+ * Lite driver source code is located in bare_driver_lite subdirectory
+
+	* Documentation .chm file updated
+
+
+########################################################
+# Package ReleaseNotes: 4.4.4 rev 1610
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	* Include LL driver version tags/release_1.1.37.12156_FW398
+	* Include small footprint LL driver version tags/release_1.2.3.47_lf
+	* Add additional pragma SMALL_FOOTPRINT to make the Lite Driver compile
+
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 4.4.3 rev 1594
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	* Include LL driver version tags/release_1.1.37.12156_FW398
+	* Include small footprint LL driver version tags/release_1.2.3.47_lf
+	** Note that delivery area has not been updated only the external link
+	* Renamed: VL53L1_XTALKCALIBRATIONMODE_HIST to VL53L1_XTALKCALIBRATIONMODE_NO_TARGET
+	and VL53L1_XTALKCALIBRATIONMODE_LITE to VL53L1_XTALKCALIBRATIONMODE_SINGLE_TARGET
+	* Ranamed tuning param from VL53L1_TUNING_SD_XTALK_TARGET to VL53L1_TUNING_SINGLE_TARGET_XTALK_TARGET_DISTANCE_MM
+	* Add Tuning param VL53L1_TUNING_SINGLE_TARGET_XTALK_SAMPLE_NUMBER
+	* Modified function SDXTalkCalibration and renamed to SingleTargetXTalkCalibration
+	* Add define CHECK_ERROR_GO_ENDFUNC this avoid to have condition on Status that imply additional tabs.
+	* Add VL53L1_CALIBRATION_DATA_STRUCT_VERSION and VL53L1_ADDITIONAL_CALIBRATION_DATA_STRUCT_VERSION in def.h
+
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 4.4.2 rev 1584
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	* Include LL driver version tags/release_1.1.35.12147_FW398
+	* Include small footprint LL driver version tags/release_1.2.2.46_lf
+	* Changed pragma vl53l1_CALIB to VL53L1_NOCALIB
+
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 4.4.1 rev 1577
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	* Include LL driver version tags/release_1.1.34.12146_FW398
+ *  small footprint LL driver version tags/release_1.2.1.39_lf
+
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 4.4.0 rev 1572
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	* Include LL driver version tags/release_1.1.32.12123_FW398
+ * Include small footprint LL driver version tags/release_1.2.1.39_lf
+ * To compile bare driver with small footprint LL driver the compilation flag SMALL_FOOTPRINT from the new delivery folder bare_driver_lite
+ * added SD Xtlak calibration not fully tested. A new bare driver's tuning param
+ allows to set the target distance VL53L1_TUNING_SD_XTALK_TARGET
+	* modified ranging status VL53L1_RANGESTATUS_RANGE_INVALID generation in case of
+	negative ranging values (addition of new tuning param VL53L1_TUNING_PROXY_MIN for bare driver
+ * provide a way to achieve 2V8 power mode selection (codex 447463) using USE_I2C_2V8 compilation flag
+
+	* Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 4.3.18 rev 1561
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	* Include LL driver version tags/release_1.1.32.12123_FW398
+	* Added a new ranging status VL53L1_RANGESTATUS_RANGE_INVALID in case of
+	negative ranging values (codex #445510)
+
+	* Documentation .chm file updated
+	* Verification tests ran OK
+
+
+########################################################
+# Package ReleaseNotes: 4.3.17 rev 1551
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	* Include LL driver version tags/release_1.1.32.12123_FW398
+
+	* Documentation .chm file updated
+	* Verification tests ran OK
+
+########################################################
+# Package ReleaseNotes: 4.3.16 rev 1550
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	* Include LL driver version tags/release_1.1.31.12117_FW398 (mainly fix for Low Power Autonomous mode)
+	* Fix codex 443635 : Timing budget is reset to default value when calling VL53L1_SetDistanceMode()
+
+	* Documentation .chm file updated
+	* Verification tests ran OK
+
+########################################################
+# Package ReleaseNotes: 4.3.15 rev 1538
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	* Include LL driver version tags/release_1.1.29.12091_FW398
+	* Fix missing code for some ranging error with mode VL53L1_PRESETMODE_SPECIAL_SHORT_RANGING
+
+	* Documentation .chm file updated
+	* Verification tests ran OK
+
+########################################################
+# Package ReleaseNotes: 4.3.13 rev 1522
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*	Include LL driver version tags/release_1.1.27.12074_FW398
+ * added new low power autonomous mode : VL53L1_PRESETMODE_LOWPOWER_AUTONOMOUS
+ * added new proxy histogram mode : VL53L1_PRESETMODE_SPECIAL_SHORT_RANGING
+
+	*	Documentation .chm file updated
+	*	Verification tests ran OK
+
+########################################################
+# Package ReleaseNotes: 4.3.12 rev 1508
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*	Include LL driver version tags/release_1.1.26.12059_FW398
+ * correction timing budget in Autonomous case see codex #439113
+
+	*	Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 4.3.11 rev 1503
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*	Include LL driver version tags/release_1.1.26.12059_FW398
+ * revert changes in VL53L1_SetDeviceAddress() see codex #411507
+
+	*	Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 4.3.10 rev 1500
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*	Include LL driver version tags/release_1.1.26.12059_FW398
+
+	*	Documentation .chm file updated
+	*	Verification tests ran OK
+
+########################################################
+# Package ReleaseNotes: 4.3.9 rev 1489
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*	Include LL driver version branches/release_1.1.24.12043_FW398_update1
+
+	*	Fixed issue #437746 Sigma check fail status (1) wrongly mapped to Signal Range Status (2) in Lite/Autonomous mode
+
+	*	Documentation .chm file updated
+	*	Verification tests ran OK
+
+########################################################
+# Package ReleaseNotes: 4.3.8 rev 1468
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*	Include LL driver version tags/release_1.1.23.12016_FW398
+
+	*	Fixed range status inversion between lite and ranging mode for codes different from VL53L1_RANGESTATUS_RANGE_VALID (0) inversion
+
+	*	Documentation .chm file updated
+	*	Verification tests ran OK
+
+########################################################
+# Package ReleaseNotes: 4.3.7 rev 1444
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*	Include LL driver version tags/release_1.1.23.12016_FW398
+
+	*	All modes for smudge correction are functionnal
+	*	HasXtalkValueChanged in ranging measurements structure is functionnal
+
+	*	Documentation .chm file updated
+	*	Verification tests ran OK
+
+########################################################
+# Package ReleaseNotes: 4.3.6 rev 1437
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*	Include LL driver version tags/release_1.1.22.11978_FW398
+
+	*	Updated smudge correction enable and removed useless function VL53L1_UpdateXTalkCorrection()
+	*	Added HasXtalkValueChanged to ranging measurements structure
+	*	Updated range status code and addition of new ones. Details of range status has been updated in the "RangeStatus" section in the documentation
+
+	*	Documentation .chm file updated
+	*	Verification tests ran but errors found in VL53L1 Limit Check Functions testing
+
+########################################################
+# Package ReleaseNotes: 4.3.5 rev 1408 internal
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*	Include LL driver version branches/release_1.1.21.11884_FW398_update1
+
+	*	Add function VL53L1_UpdateXTalkCorrection()
+	*	Align with latest LLD tuning parameter sets
+	*	Take advantage of new LLD VL53L1_get_preset_mode_timing_cfg() function
+	*	There is no more tuning parameters for the bare driver itself but its table has been maintained for future usage
+
+	*	Doc not changed.
+	*	Verification test NOT run
+
+########################################################
+# Package ReleaseNotes: 4.3.4 rev 1364 internal2
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*	Include LL driver version tags/release_1.1.20.11816_FW398
+
+	*	Add missing file vl53l1_preset_setup.h in obfuscated code.
+		*	change of obfuscation setup required
+
+	*	Doc not changed.
+	*	Verification test NOT run
+
+########################################################
+# Package ReleaseNotes: 4.3.4 rev 1364 internal
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*	Include LL driver version tags/release_1.1.20.11816_FW398
+
+	*	Add tuning parameter files vl53l1_preset_setup.h file.
+	*	Replaced fixed value for tuning setting with BDTable.
+	*	Add limit on VL53L1_SetDmaxReflectance(): error if value set is greater than 100*65536 (100% in fix point).
+	*	Function VL53L1_GetRangingMeasurementData() return VL53L1_ERROR_MODE_NOT_SUPPORTED in case of VL53L1_PRESETMODE_MULTIZONES_SCANNING.
+	*	Add VL53L1_GetAdditionalData.
+
+	*	Doc updated.
+	*	Verification test run
+	*	Global Status: RUN PASS = 42  RUN FAIL = 0 NOT RUN  = 0
+
+########################################################
+# Package ReleaseNotes: 4.3.3 rev 1334
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*	Include LL driver version tags/release_1.1.19.11726_FW398
+
+	*	Correct VL53L1_PerformXTalkCalibration(), fixed bad tuning settings and set valid range to -70/+70mm
+	*	Fixed typo function VL53L1_Error VL53L1_GetZoneCalibration() is now VL53L1_Error VL53L1_GetZoneCalibrationData()
+
+	*	Doc updated.
+	*	Verification test run
+	*	Global Status: RUN PASS = 42  RUN FAIL = 0 NOT RUN  = 0
+
+########################################################
+# Package ReleaseNotes: 4.3.2 rev 1306
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*	Include LL driver version tags/release_1.1.19.11726_FW398
+
+	*	Correct VL53L1_PerformOffsetCalibration(), changed tuning settings and correct device_preset_mode
+	*	Set Range Quality Level to 50% in case of VL53L1_DEVICEERROR_PHASECONSISTENCY and at lease 1 objects
+	*	Checkpatch correction
+
+	*	Doc updated.
+	*	Verification test run
+	*	Global Status: RUN PASS = 39 RUN FAIL = 2 NOT RUN  = 0
+		*	1 test FAIL on XtalkCompensation air gap used 1 mm.
+		*	1 test FAIL on VL53L1_PerformOffsetCalibration failed returned -24 Expected 0 distance used 2000 mm to run test
+
+########################################################
+# Package ReleaseNotes: 4.3.1 rev 1295
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*	Include LL driver version tags/release_1.1.19.11726_FW398
+
+	*	Changed formal parameter to DmaxReflectance in VL53L1_SetDmaxReflectance() and VL53L1_GetDmaxReflectance()
+	*	Add VL53L1_FIXPOINT44TOFIXPOINT1616 and VL53L1_FIXPOINT1616TOFIXPOINT44
+	*	changed API on VL53L1_GetOpticalCenter(), use fix point outputs
+	*	Add prefix VL53L1 on DMAXMODE defines
+	*	Checkpatch correction
+
+	*	Doc updated.
+	*	Verification test run
+	*	Global Status: RUN PASS = 27 RUN FAIL = 2 NOT RUN  = 0
+		*	1 test FAIL because no target was over the ewok so timeout but seen ok in previous run
+		*	1 test FAIL on VL53L1_PerformOffsetCalibration failed returned -24 Expected 0 distance used 2000 mm to run test
+
+########################################################
+# Package ReleaseNotes: 4.3.0 rev 1278
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*	Include LL driver version tags/release_1.1.19.11726_FW398
+
+	*	Corrected frequency to 15 Hz in Lite Ranging
+	*	Add VL53L1_SetZoneCalibrationData and VL53L1_GetZoneCalibrationData
+
+	*	Doc updated.
+	*	Verification test run
+	*	Global Status: RUN PASS = 27 RUN FAIL = 2 NOT RUN  = 0
+
+########################################################
+# Package ReleaseNotes: 4.2.0 rev 1273
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*	Include LL driver version tags/release_1.1.18.11710_FW398
+
+	*	Changed frequency to 15 Hz in Lite Ranging
+	*	Correct VL53L1_FIXPOINT1616TOFIXPOINT72 and VL53L1_FIXPOINT72TOFIXPOINT1616 definition
+
+	*	Doc not updated.
+	*	Verification test not run
+
+########################################################
+# Package ReleaseNotes: 4.1.0 rev 1268
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*	Include LL driver version branches/release_1.1.16.11634_FW398_update1
+
+	*	Added new setup functions to bare driver
+	*	VL53L1_GetOpticalCenter()
+	*	VL53L1_SetDmaxReflectance() & VL53L1_GetDmaxReflectance()
+	*	VL53L1_SetDmaxMode() & VL53L1_GetDmaxMode()
+
+	*	Doc updated.
+	*	Verification test not run
+
+########################################################
+# Package ReleaseNotes: 4.0.0 rev 1249
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*	Include LL driver version branches/release_1.1.15.11576_FW398_update1
+
+	*  	Beta Ranging done with:
+			VL53L1_PRESETMODE_LITE_RANGING
+			VL53L1_PRESETMODE_RANGING preset
+			VL53L1_PRESETMODE_MULTIZONES_SCANNING
+			VL53L1_PRESETMODE_AUTONOMOUS
+
+	*   Corrected condition to change distance in automatic ambient management.
+	*	Replaced min function with MIN macro.
+	*	Add VL53L1_OFFSETCALIBRATIONMODE_MULTI_ZONE in VL53L1_OffsetCalibrationModes.
+	*	Add per zone offset calibration.
+	*	Add Range Quality Level.
+
+	*   Doc NOT generated.
+	*	Verification test not run
+
+########################################################
+# Package ReleaseNotes: 3.9.1 rev 1229
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*	Include LL driver version branches/release_1.1.15.11576_FW398_update1
+
+	*  	Beta Ranging done with:
+			VL53L1_PRESETMODE_LITE_RANGING
+			VL53L1_PRESETMODE_RANGING preset
+			VL53L1_PRESETMODE_MULTIZONES_SCANNING
+			VL53L1_PRESETMODE_AUTONOMOUS
+
+	*   Corrected Dmax value: output the min between dmax ambient and dmax wraparound.
+	*   Corrected if else if on new function SetOffsetCalibrationMode and doxygen comment.
+	*   Set IGNORE_INSUFFICIENT_MM1_SPADS_CALIBRATION_ERROR to 1.
+	*   Correct dmax value, test count and error status not set in VL53L1_GetMultiRangingData when no objects found.
+	*   Doc generated.
+
+	*	Verification test run
+	*	Global Status: RUN PASS = 39 RUN FAIL = 0 NOT RUN  = 0
+
+########################################################
+# Package ReleaseNotes: 3.9.0 rev 1222
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*	Include LL driver version branches/release_1.1.15.11576_FW398
+
+	*  	Beta Ranging done with:
+			VL53L1_PRESETMODE_LITE_RANGING
+			VL53L1_PRESETMODE_RANGING preset
+			VL53L1_PRESETMODE_MULTIZONES_SCANNING
+			VL53L1_PRESETMODE_AUTONOMOUS
+
+	*   Add VL53L1_SetOffsetCalibrationMode() this is used to chose which offset calibration shoud be run.
+	*   Doc generated.
+
+	*	Verification test run
+	*	Global Status: RUN PASS = 39 RUN FAIL = 0 NOT RUN  = 0
+
+########################################################
+# Package ReleaseNotes: 3.8.0 rev 1214
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*	Include LL driver version branches/release_1.1.13.11518_FW398_update1
+
+	*  	Beta Ranging done with:
+			VL53L1_PRESETMODE_LITE_RANGING
+			VL53L1_PRESETMODE_RANGING preset
+			VL53L1_PRESETMODE_MULTIZONES_SCANNING
+			VL53L1_PRESETMODE_AUTONOMOUS
+
+	*   Reset output structure to 0xFF instead of 0 so when numer of object is zero by default we have range status to 0xFF.
+	*   Correct bug on VL53L1_GetMultiRangingData() in some cases good data were not output.
+	*   Doc generated.
+
+	*	Verification test run
+	*	Global Status: RUN PASS = 39 RUN FAIL = 0 NOT RUN  = 0
+
+########################################################
+# Package ReleaseNotes: 3.7.2 rev 1195
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*	Include LL driver version branches/release_1.1.13.11518_FW398_update1
+
+	*  	Beta Ranging done with:
+			VL53L1_PRESETMODE_LITE_RANGING
+			VL53L1_PRESETMODE_RANGING preset
+			VL53L1_PRESETMODE_MULTIZONES_SCANNING
+			VL53L1_PRESETMODE_AUTONOMOUS
+
+	*   Updated Timing budget function with LL Driver functions VL53L1_get_timeouts_us() VL53L1_set_timeouts_us().
+	*   Changed set preset mode to integrate new api from LL driver.
+	*   Renamed ConfidenceLevel to RangeQualityLevel.
+	*   Changed doc on VL53L1_SetOutputMode and VL53L1_SetDistanceMode.
+	*   Clean checkpatch errors and reduced wornings.
+	*   Doc generated.
+
+	*	Verification test run
+	*	Global Status: RUN PASS = 36 RUN FAIL = 1 NOT RUN  = 0
+
+########################################################
+# Package ReleaseNotes: 3.7.1 rev 1141
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*	Include LL driver version release_1.1.11.11462_FW398
+	*  	Beta Ranging done with VL53L1_PRESETMODE_LITE_RANGING preset mode
+	*  	Beta Ranging done with VL53L1_PRESETMODE_RANGING preset mode
+	*  	Alpha Ranging done with the following preset modes:
+		* VL53L1_PRESETMODE_MULTIZONES_SCANNING, VL53L1_PRESETMODE_AUTONOMOUS
+
+	*   Changed default preset mode from LITE_RANGING to RANGING.
+	*   Renamed ConfidenceLevel to RangeQualityLevel.
+	*   Changed doc on VL53L1_SetOutputMode and VL53L1_SetDistanceMode.
+	*   Doc generated.
+
+	*	Verification test not run
+
+########################################################
+# Package ReleaseNotes: 3.7.0 rev 1118
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*	Include LL driver version release_1.1.9.11369_FW398
+	*  	Beta Ranging done with VL53L1_PRESETMODE_LITE_RANGING preset mode
+	*  	Beta Ranging done with VL53L1_PRESETMODE_RANGING preset mode
+	*  	Alpha Ranging done with the following preset modes:
+		* VL53L1_PRESETMODE_MULTIZONES_SCANNING, VL53L1_PRESETMODE_AUTONOMOUS
+
+	*   Add Manual distance mode support for both VL53L1_PRESETMODE_MULTIZONES_SCANNING, VL53L1_PRESETMODE_AUTONOMOUS.
+	*   Checkpatch clean.
+	*   Add example for extended compilation: use build 'ExtendedRanging'.
+	*   Code obfuscated generated.
+	*   Doc generated.
+
+	*	Verification test not run
+
+########################################################
+# Package ReleaseNotes: 3.6.0 rev 1107
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*	Include LL driver version release_1.1.9.11369_FW398
+	*  	Beta Ranging done with VL53L1_PRESETMODE_LITE_RANGING preset mode
+	*  	Alpha Ranging done with VL53L1_PRESETMODE_RANGING preset mode
+	*  	Alpha Ranging done with the following preset modes:
+		* VL53L1_PRESETMODE_MULTIZONES_SCANNING, VL53L1_PRESETMODE_AUTONOMOUS
+
+	*   Code obfuscated generated.
+	*   Doc generated.
+
+	*	Verification test not run
+
+########################################################
+# Package ReleaseNotes: 3.5.0 rev 1078
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*	Include LL driver version release_1.1.7.11204_FW398
+	*  	Beta Ranging done with VL53L1_PRESETMODE_LITE_RANGING preset mode
+	*  	Alpha Ranging done with VL53L1_PRESETMODE_RANGING preset mode
+	*  	Prelim Ranging done with the following preset modes:
+		* VL53L1_PRESETMODE_MULTIZONES_SCANNING, VL53L1_PRESETMODE_AUTONOMOUS
+
+	*	Removed VL53L1_ResetDevice().
+	*   Correct NewDistanceMode generation.
+	*   Removed temporary extern VL53L1_get_xtalk_compensation_enable().
+	*   Updated VL53L1_run_offset_calibration api.
+	*   Add VL53L1_SetThresholdConfig, VL53L1_GetThresholdConfig, VL53L1_DetectionMode, VL53L1_DetectionConfig_t.
+	*   Code obfuscated generated.
+
+	*	Verification test not run, doc not generated
+
+########################################################
+# Package ReleaseNotes: 3.4.0 rev 1053
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+
+	*   the following field in VL53L1_RangingMeasurementData_t have been changed
+		from uint16_t to int16_t : RangeMaxMilliMeter, RangeMinMilliMeter, RangeMilliMeter and DmaxMilliMeter
+
+	*	Include LL driver version release_1.1.7.11204_FW398
+	*  	Beta Ranging done with VL53L1_PRESETMODE_LITE_RANGING preset mode
+	*  	Alpha Ranging done with VL53L1_PRESETMODE_RANGING preset mode
+	*  	Prelim Ranging done with the following preset modes:
+		* VL53L1_PRESETMODE_MULTIZONES_SCANNING, VL53L1_PRESETMODE_AUTONOMOUS
+	*	Add new VL53L1_GetXTalkCompensationEnable().
+	*   Set timing budget to 33 ms in case of VL53L1_PRESETMODE_LITE_RANGING and 16 ms in all other cases.
+	*   Implemented set/get DistanceMode SHORT, MID, LONG AUTO_LITE and AUTO modes, this permit to optimise the ranging precision.
+	*   DistanceMode AUTO not fully functional.
+	*   Implemented set/get OutputMode NEAREST and STRONGEST modes, this permit to chose the object to output on function VL53L1_GetRangingMeasurementData() in both RANGING and MULTIZONES_SCANNING.
+	*   Improved set preset mode function.
+	*   Code obfuscated generated.
+
+	*	Verification test not run, doc not generated
+
+
+########################################################
+# Package ReleaseNotes: 3.2.0 rev 1019
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+	*	Include LL driver version release_1.1.6.11056111_FW398_update1
+	*  	Beta Ranging done with VL53L1_PRESETMODE_LITE_RANGING preset mode
+	*  	Alpha Ranging done with VL53L1_PRESETMODE_RANGING preset mode
+	*  	Prelim Ranging done with the following preset modes:
+		* VL53L1_PRESETMODE_MULTIZONES_SCANNING, VL53L1_PRESETMODE_AUTONOMOUS
+	*	Removed functions SetGpioConfig(), GetGpioConfig() to set GPIO polarity, due to HW limitation.
+	*	Add new range status mode VL53L1_RANGESTATUS_RANGE_VALID_NO_WRAP_CHECK in caso of valid ranging with no wraparound check.
+	*	Verification test run on obfuscated code:
+		*	Report in doc directory.
+		*   Verification: Run 42 Succeeded 28 Failed 14. The fails are due to the fact that min>max
+
+
+
+
+########################################################
+# Package ReleaseNotes: 3.1.0 rev 992
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+	*	Include LL driver version release_1.1.6.11056_fw398_update1
+	*  	Beta Ranging done with VL53L1_PRESETMODE_LITE_RANGING preset mode
+	*  	Alpha Ranging done with VL53L1_PRESETMODE_RANGING preset mode
+	*  	Prelim Ranging done with the following preset modes:
+		* VL53L1_PRESETMODE_MULTIZONES_SCANNING, VL53L1_PRESETMODE_AUTONOMOUS
+	*	Set internal measurement mode after a set preset mode.
+	*	Add Calibration functions: VL53L1_SetCalibrationData, VL53L1_GetCalibrationData
+	*	Corrected range status
+	*	Add Autonomous Example, verified with scope that intermeasurement period function has effect
+	*	Updated xtalk function due to API changes
+	*	Add xtalk enable/disable function.
+	*	Removed returned parameters on function VL53L1_PerformRefSpadManagement().
+	*	Add functions SetGpioConfig(), GetGpioConfig() to set GPIO polarity, no threshold option added.
+		Only mode VL53L1_GPIOFUNCTIONALITY_NEW_MEASURE_READY is supported.
+	*	Add default SetGpioConfig() in staticinit(): VL53L1_GPIOFUNCTIONALITY_NEW_MEASURE_READY and VL53L1_INTERRUPTPOLARITY_LOW.
+	*	Verification test run on obfuscated code:
+		* 	Some divide by zero error found on test ROI 13x13
+		*	Report in doc directory.
+
+
+########################################################
+# Package ReleaseNotes: 3.0.0 rev 920
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+	*	Note on this version:
+	*	Include LL driver version release_1.1.3.1925_fw398
+	*	Changed Preset Name to: VL53L1_PRESETMODE_RANGING, VL53L1_PRESETMODE_MULTIZONES_SCANNING, VL53L1_PRESETMODE_AUTONOMOUS and VL53L1_PRESETMODE_LITE_RANGING
+	*  	Alpha Ranging done with VL53L1_PRESETMODE_LITE_RANGING preset mode
+	*  	Prelim Ranging done with the following preset modes: VL53L1_PRESETMODE_RANGING and Mode VL53L1_PRESETMODE_MULTIZONES_SCANNING
+	*	Corrected check on LITE RANGING Mode.
+	*	Removed all NOT_IMPLEMENTED functions from driver.
+	*	Verification test run on obfuscated code:
+		* 	2 tests fails out of 35 due to 'VL53L1_GetMeasurementDataReady didn't return expected RoiNumber'
+		*	Report in doc directory.
+
+
+########################################################
+# Package ReleaseNotes: 2.5.0 rev 906
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+     *	Note on this version:
+     *	Include LL driver version release_1.1.3.1925_fw398
+     *	Basic Ranging Mode VL53L1_PRESETMODE_STANDARD_RANGING and Mode VL53L1_PRESETMODE_MULTI_OBJECT, prelim  VL53L1_PRESETMODE_MULTI_ZONES.
+		*	VL53L1_PerformOffsetCalibration, VL53L1_SetInterMeasurementPeriodMilliSeconds, VL53L1_GetInterMeasurementPeriodMilliSeconds implemented but not tested.
+		*	Increased timeout value in platform settings to allow timing budget near to the max (1 second)
+		*	Improved timing budget functions implementation.
+		*	Add comment in field not yet implemented.
+        *	Verification test run on obfuscated code: all tests run ok, report in doc directory.
+
+
+########################################################
+# Package ReleaseNotes: 2.4.1 rev 888
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+    *	Note on this version:
+        *	Include LL driver version release_1.1.3.1925_fw398
+        *	Basic Ranging Mode VL53L1_PRESETMODE_STANDARD_RANGING and Mode VL53L1_PRESETMODE_MULTI_OBJECT, prelim  VL53L1_PRESETMODE_MULTI_ZONES.
+		*	VL53L1_PerformOffsetCalibration, VL53L1_SetInterMeasurementPeriodMilliSeconds, VL53L1_GetInterMeasurementPeriodMilliSeconds implemented but not tested.
+		*	Improved timing budget functions implementation.
+		*	Removed not yet implemented functions
+		*	Removed fields not used nor implemented from structures
+	*	Verification test run on obfuscated code: all tests run ok, report in doc directory.
+
+
+########################################################
+# Package ReleaseNotes: 2.4.0 rev 871
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+     *	Note on this version:
+         *	Include LL driver version release_1.1.2.1877_fw398
+         *	Basic Ranging Mode VL53L1_PRESETMODE_STANDARD_RANGING and Mode VL53L1_PRESETMODE_MULTI_OBJECT, prelim  VL53L1_PRESETMODE_MULTI_ZONES.
+         *	API modification on Vl53L1_GetMultiRangingData() output only 1 ROI at a time.
+		•	Add RoiStatus on the output to know if data collected is valid or not.
+		•	VL53L1_PerformXTalkCalibration implemented.
+		•	Timing budget updated.
+         *	Some functions are not yet implemented (documented as "Returns: VL53L1_ERROR_NOT_IMPLEMENTED" in VL53L1_API.pdf)
+         *	Verification test run on obfuscated code: all tests run ok, report in doc directory.
+
+
+########################################################
+# Package ReleaseNotes: 2.3.1 rev 841
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+     *	Note on this version:
+         *	Include LL driver v1.1.0.1844 tag release_1.1.0.1844_fw398_update1
+         *	Basic Ranging Mode VL53L1_PRESETMODE_STANDARD_RANGING and Mode VL53L1_PRESETMODE_MULTI_OBJECT, prelim  VL53L1_PRESETMODE_MULTI_ZONES.
+         *	Some functions are not yet implemented (documented as "Returns: VL53L1_ERROR_NOT_IMPLEMENTED" in VL53L1_API.pdf)
+         *	Verification test run: all tests run ok, report in doc directory.
+
+
+########################################################
+# Package ReleaseNotes: 1.1.5 rev 769
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+     *	Note on this version:
+         *	Include LL driver v1.0.0.1713 tag release_1.0.0.1713_fw398_customer_release
+         *	Basic Ranging Mode VL53L1_PRESETMODE_STANDARD_RANGING and Mode VL53L1_PRESETMODE_MULTI_OBJECT only.
+         *	Preliminary ROI support for mode VL53L1_PRESETMODE_STANDARD_RANGING and Mode VL53L1_PRESETMODE_MULTI_OBJECT only.
+         *	Preliminary Measurement Timing Budget functions.
+         *	Example test done with both gcc 32 and 64 bit.
+         *	New API function : Vl53L1_GetMultiRangingData
+         *	New API function : VL53L1_ClearInterruptAndStartMeasurement
+         *	Limit check functions supports only VL53L1_CHECKENABLE_SIGMA_FINAL_RANGE & VL53L1_CHECKENABLE_SIGNAL_RATE_FINAL_RANGE
+         *	Some functions are not yet implemented (documented as "Returns: VL53L1_ERROR_NOT_IMPLEMENTED" in VL53L1_API.pdf)
+         *	Minimum ROI size is 4x4.
+         *	Verification test run: all tests run ok, report in doc directory.
+
+
+########################################################
+# Package ReleaseNotes: 1.1.5 rev 629
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+     *	Note on this version:
+         *	Include LL driver v1.0.0.1713.
+         *	Basic Ranging Mode 1 and Mode 2.
+         *	Preliminary ROI support for both Mode 1 and Mode 2.
+         *	Preliminary Measurement Timing Budget functions.
+         *	Example test done with both gcc 32 and 64 bit.
+         *	Obfuscation.
+         *	New API function : VL53L1_ClearInterruptAndStartMeasurement
+         *	Minimum ROI size is 4x4.
+         *	Verification test run: all tests run ok, report in doc directory.
+
+
+########################################################
+# Package ReleaseNotes: 1.1.4 rev 627
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+     *	Note on this version:
+         *	Include LL driver v0.7.0 1470.
+         *	Basic Ranging Mode 1 and Mode 2.
+         *	Preliminary ROI support for both Mode 1 and Mode 2.
+         *	Preliminary Measurement Timing Budget functions.
+         *	Python Wrapper 64 bit with example code.
+         *	Example test done with both gcc 32 and 64 bit.
+         *	No obfuscation.
+         *	New API description.
+         *	Verification test run: all tests run ok, report in doc directory.
+
+         *	Corrected timing budget computation in case of Multi Object.
+
+########################################################
+# Package ReleaseNotes: 1.1.3 rev 616
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+     *	Note on this version:
+         *	Include LL driver v0.7.0 1470.
+         *	Basic Ranging Mode 1 and Mode 2.
+         *	Preliminary ROI support for both Mode 1 and Mode 2.
+         *	Preliminary Measurement Timing Budget functions.
+         *	Python Wrapper 64 bit with example code.
+         *	Example test done with both gcc 32 and 64 bit.
+         *	No obfuscation.
+         *	New API description.
+         *	Verification test run: all tests run ok, report in doc directory.
+
+         *	Changed restriction on ROI size in setROI() function now min size is 5x5 instead of 6x6.
+
+########################################################
+# Package ReleaseNotes: 1.1.2 rev 612
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+     *	Note on this version:
+         *	Include LL driver v0.7.0 1470.
+         *	Basic Ranging Mode 1 and Mode 2.
+         *	Preliminary ROI support for both Mode 1 and Mode 2.
+         *	Preliminary Measurement Timing Budget functions.
+         *	Python Wrapper 64 bit with example code.
+         *	Example test done with both gcc 32 and 64 bit.
+         *	No obfuscation.
+         *	New API description.
+         *	Verification test run: all tests run ok, report in doc directory.
+
+         *	Correction on Python Wrapper.
+         *	Correction on coordinates in getROI() function.
+
+########################################################
+# Package ReleaseNotes: 1.1.1 rev 607
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+     *	Note on this version:
+         *	Include LL driver v0.7.0 1470.
+         *	Basic Ranging Mode 1 and Mode 2.
+         *	Preliminary ROI support for both Mode 1 and Mode 2.
+         *	Preliminary Measurement Timing Budget functions.
+         *	Python Wrapper 64 bit with example code.
+         *	Example test done with both gcc 32 and 64 bit.
+         *	No obfuscation.
+         *	New API description.
+         *	Verification test run: all tests run ok, report in doc directory.
+
+########################################################
+# Package ReleaseNotes: 1.1.0 rev 573
+########################################################
+
+* This package contains:
+
+-- EwokPlus cut 1.1 Bare Driver
+     *	Note on this version:
+         *	Include LL driver v0.7.0 1470.
+         *	Basic Ranging Only Mode 1.
+         *	Stop  Ranging done.
+         *	Python Wrapper 64 bit with example code.
+         *	Example test done with both gcc 32 and 64 bit.
+         *	No obfuscation.
+         *	New API description.
+         *	Verification test run: preset mode test fail, report in doc directory.
