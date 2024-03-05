@@ -41,7 +41,7 @@ TOF, I2C, VCOM
 	- SCL <—--> D15
 	- SDA <—--> D14
 	- EXT MISO NC
-	- I2C_RST (NCS) <—--> D10
+	- I2C_RST (NCS) NC
 	- EXT LPn <—--> A3
 	- EXT SPI_I2C <--—> GND
     - GPIO1 <---> A2
@@ -64,10 +64,8 @@ In order to make the program work, you must do the following:
  - WARNING: before opening the project with any toolchain be sure your folder
    installation path is not too in-depth since the toolchain may report errors
    after building.
- - Open STM32CubeIDE (this firmware has been successfully tested with Version 1.10.1).
-   Alternatively you can use the Keil uVision toolchain (this firmware
-   has been successfully tested with V5.37.0) or the IAR toolchain (this firmware has 
-   been successfully tested with Embedded Workbench V9.20.1).
+ - Open STM32CubeIDE.
+   Alternatively you can use the Keil uVision toolchain or the IAR toolchain.
  - Rebuild all files and load your image into target memory.
  - Run the example.
  - Alternatively, you can download the pre-built binaries in "Binary" 

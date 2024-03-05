@@ -37,9 +37,6 @@ extern "C" {
 #define VL53L8A1_LPn_C_PIN   (GPIO_PIN_0)
 #define VL53L8A1_LPn_C_PORT  (GPIOB)
 
-#define VL53L8A1_I2C_RST_C_PIN   (GPIO_PIN_6)
-#define VL53L8A1_I2C_RST_C_PORT  (GPIOB)
-
 #ifdef __cplusplus
 }
 #endif

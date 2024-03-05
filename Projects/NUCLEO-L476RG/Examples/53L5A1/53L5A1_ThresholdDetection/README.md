@@ -13,6 +13,7 @@ lang: en
 
 This example application shows how to use the X-NUCLEO-53L5A1 expansion board and a STM32 Nucleo board 
 to perform threshold detection and print the results on a hyper-terminal such as TeraTerm through a serial link.
+The rangings are displayed when a target is found between 20 cm and 60 cm from the target.
 Please refer to the user manual for more details.
 
 The example application uses the following default serial settings:
@@ -47,10 +48,8 @@ In order to make the program work, you must do the following:
  - WARNING: before opening the project with any toolchain be sure your folder
    installation path is not too in-depth since the toolchain may report errors
    after building.
- - Open STM32CubeIDE (this firmware has been successfully tested with Version 1.9.0).
-   Alternatively you can use the Keil uVision toolchain (this firmware
-   has been successfully tested with V5.37.0) or the IAR toolchain (this firmware has 
-   been successfully tested with Embedded Workbench V9.20.1).
+ - Open STM32CubeIDE.
+   Alternatively you can use the Keil uVision toolchain or the IAR toolchain.
  - Rebuild all files and load your image into target memory.
  - Run the example.
  - Alternatively, you can download the pre-built binaries in "Binary" 

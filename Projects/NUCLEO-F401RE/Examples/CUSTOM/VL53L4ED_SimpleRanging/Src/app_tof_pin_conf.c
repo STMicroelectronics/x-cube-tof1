@@ -16,11 +16,22 @@
   ******************************************************************************
   */
 
+#define STM32F4xx
+
 /* Includes ------------------------------------------------------------------*/
 #include "app_tof_pin_conf.h"
 
 extern volatile uint8_t ToF_EventDetected;
 
+#ifdef STM32G0xx
+void HAL_GPIO_EXTI_Falling_Callback(uint16_t GPIO_Pin)
+{
+  if (GPIO_Pin == TOF_INT_EXTI_PIN)
+  {
+    ToF_EventDetected = 1;
+  }
+}
+#else
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
   if (GPIO_Pin == TOF_INT_EXTI_PIN)
@@ -28,3 +39,4 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
     ToF_EventDetected = 1;
   }
 }
+#endif

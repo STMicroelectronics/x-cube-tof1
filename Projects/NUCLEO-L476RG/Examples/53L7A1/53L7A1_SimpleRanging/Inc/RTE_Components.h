@@ -22,7 +22,7 @@
 #define  __RTE_COMPONENTS_H__
 
 /* Defines ------------------------------------------------------------------*/
-/* STMicroelectronics.X-CUBE-TOF1.3.4.0 */
+/* STMicroelectronics.X-CUBE-TOF1.3.4.1 */
 #define _53L7A1_SIMPLE_RANGING
 #define _53L7A1
 

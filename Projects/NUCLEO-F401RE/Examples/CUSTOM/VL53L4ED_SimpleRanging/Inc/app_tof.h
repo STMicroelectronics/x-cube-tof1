@@ -3,7 +3,7 @@
   * @file          : app_tof.h
   * @author        : IMG SW Application Team
   * @brief         : This file provides code for the configuration
-  *                  of the STMicroelectronics.X-CUBE-TOF1.3.4.0 instances.
+  *                  of the STMicroelectronics.X-CUBE-TOF1.3.4.1 instances.
   ******************************************************************************
   *
   * @attention
