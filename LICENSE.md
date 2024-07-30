@@ -5,7 +5,7 @@
 | CMSIS Device                             			| ARM Limited - STMicroelectronics   | Apache-2.0 |
 | STM32F4 HAL                              			| STMicroelectronics   | BSD-3-Clause |
 | STM32L4 HAL                              			| STMicroelectronics   | BSD-3-Clause |
-| BSP Components                           			| STMicroelectronics   | BSD-3-Clause + SLA0081 | 
+| BSP Components                           			| STMicroelectronics   | BSD-3-Clause + SLA | 
 | BSP 53L1A2                            			| STMicroelectronics   | BSD-3-Clause |
 | BSP 53L3A2		                      			| STMicroelectronics   | BSD-3-Clause |
 | BSP 53L4A1                              			| STMicroelectronics   | BSD-3-Clause |

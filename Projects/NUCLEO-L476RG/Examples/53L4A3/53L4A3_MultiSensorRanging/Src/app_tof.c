@@ -3,7 +3,7 @@
   * @file          : app_tof.c
   * @author        : IMG SW Application Team
   * @brief         : This file provides code for the configuration
-  *                  of the STMicroelectronics.X-CUBE-TOF1.3.4.1 instances.
+  *                  of the STMicroelectronics.X-CUBE-TOF1.3.4.2 instances.
   ******************************************************************************
   *
   * @attention
@@ -64,9 +64,6 @@ void MX_TOF_Init(void)
 
   /* USER CODE BEGIN TOF_Init_PreTreatment */
 
-  /* arbitrary wait after XShutdown to allow switch on */
-  HAL_Delay(1);
-
   /* USER CODE END TOF_Init_PreTreatment */
 
   /* Initialize the peripherals and the TOF components */
@@ -120,6 +117,7 @@ static void MX_53L4A3_MultiSensorRanging_Init(void)
     write_lowpower_pin(device, GPIO_PIN_SET);
     HAL_Delay(2);
 
+	printf("Initialize sensor %s\n", TofDevStr[device]);
     status = VL53L4A3_RANGING_SENSOR_Init(device);
 
     if (status != BSP_ERROR_NONE)
@@ -150,6 +148,7 @@ static void MX_53L4A3_MultiSensorRanging_Init(void)
 
     /* left: 0x54, center: 0x56, right: 0x58 */
     i2c_addr = (RANGING_SENSOR_VL53L4ED_ADDRESS + (device + 1) * 2);
+	printf("Set sensor %s I2C address to 0X%x\n", TofDevStr[device], i2c_addr);
     VL53L4A3_RANGING_SENSOR_SetAddress(device, i2c_addr);
 
     /* check the communication with the device reading the ID */

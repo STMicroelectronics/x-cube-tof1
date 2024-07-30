@@ -1526,7 +1526,7 @@ text-align: center;
 <div class="col-sm-12 col-lg-8">
 <h1 id="update-history">Update history</h1>
 <div class="collapse">
-<input type="checkbox" id="collapse-section7" checked aria-hidden="true"> <label for="collapse-section7" aria-hidden="true"><strong>V3.4.1 / 24-January-2024</strong></label>
+<input type="checkbox" id="collapse-section8" checked aria-hidden="true"> <label for="collapse-section8" aria-hidden="true"><strong>V3.4.2 / 02-July-2024</strong></label>
 <div>
 <h2 id="main-changes">Main changes</h2>
 <h3 id="product-update">Product Update</h3>
@@ -1538,10 +1538,10 @@ text-align: center;
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Reworked examples to remove RTC (badly enabled but no use)</td>
+<td style="text-align: left;">Reworked some multi sensor examples to fix sensor bad detection after reset</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Removed erroneous I2C_RST pin assignment in VL53L8 examples</td>
+<td style="text-align: left;">Added multi sensor example for VL53L8CX device, need for NUCLEO-53L8A1 version B for stable behavior, it is not guaranted with version A</td>
 </tr>
 </tbody>
 </table>
@@ -1648,143 +1648,153 @@ text-align: center;
 </tr>
 <tr class="odd">
 <td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L8A1/53L8A1_MultiSensorRanging">53L8A1_MultiSensorRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L8A1/53L8A1_MultiSensorRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L8A1/53L8A1_SimpleRanging">53L8A1_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L8A1/53L8A1_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">NUCLEO-F401RE</td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L8A1/53L8A1_ThresholdDetection">53L8A1_ThresholdDetection</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L8A1/53L8A1_ThresholdDetection/readme.html">readme.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">NUCLEO-F401RE</td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L1CB_SimpleRanging">VL53L1CB_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L1CB_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">NUCLEO-F401RE</td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L3CX_SimpleRanging">VL53L3CX_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L3CX_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">NUCLEO-F401RE</td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L4CD_SimpleRanging">VL53L4CD_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L4CD_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">NUCLEO-F401RE</td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L4CX_SimpleRanging">VL53L4CX_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L4CX_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">NUCLEO-F401RE</td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L4ED_SimpleRanging">VL53L4ED_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L4ED_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">NUCLEO-F401RE</td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L5CX_SimpleRanging">VL53L5CX_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L5CX_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">NUCLEO-F401RE</td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L7CX_SimpleRanging">VL53L7CX_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L7CX_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">NUCLEO-F401RE</td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L8CX_SimpleRanging">VL53L8CX_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L8CX_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L1A2/53L1A2_MultiSensorRanging">53L1A2_MultiSensorRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L1A2/53L1A2_MultiSensorRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L1A2/53L1A2_SimpleRanging">53L1A2_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L1A2/53L1A2_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L3A2/53L3A2_MultiSensorRanging">53L3A2_MultiSensorRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L3A2/53L3A2_MultiSensorRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L3A2/53L3A2_SimpleRanging">53L3A2_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L3A2/53L3A2_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A1/53L4A1_MultiSensorRanging">53L4A1_MultiSensorRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A1/53L4A1_MultiSensorRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A1/53L4A1_SimpleRanging">53L4A1_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A1/53L4A1_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">NUCLEO-F401RE</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A1/53L4A1_ThresholdDetection">53L4A1_ThresholdDetection</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A1/53L4A1_ThresholdDetection/readme.html">readme.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A2/53L4A2_MultiSensorRanging">53L4A2_MultiSensorRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A2/53L4A2_MultiSensorRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A2/53L4A2_SimpleRanging">53L4A2_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A2/53L4A2_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A3/53L4A3_MultiSensorRanging">53L4A3_MultiSensorRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A3/53L4A3_MultiSensorRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A3/53L4A3_SimpleRanging">53L4A3_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A3/53L4A3_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A3/53L4A3_ThresholdDetection">53L4A3_ThresholdDetection</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A3/53L4A3_ThresholdDetection/readme.html">readme.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L5A1/53L5A1_MultiSensorRanging">53L5A1_MultiSensorRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L5A1/53L5A1_MultiSensorRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L5A1/53L5A1_SimpleRanging">53L5A1_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L5A1/53L5A1_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L5A1/53L5A1_ThresholdDetection">53L5A1_ThresholdDetection</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L5A1/53L5A1_ThresholdDetection/readme.html">readme.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L7A1/53L7A1_MultiSensorRanging">53L7A1_MultiSensorRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L7A1/53L7A1_MultiSensorRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L7A1/53L7A1_SimpleRanging">53L7A1_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L7A1/53L7A1_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L7A1/53L7A1_ThresholdDetection">53L7A1_ThresholdDetection</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L7A1/53L7A1_ThresholdDetection/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L8A1/53L8A1_MultiSensorRanging">53L8A1_MultiSensorRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L8A1/53L8A1_MultiSensorRanging/readme.html">readme.html</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">NUCLEO-L476RG</td>
@@ -1858,7 +1868,7 @@ text-align: center;
 <ul>
 <li>IAR System Workbench V9.20.1</li>
 <li>ARM Keil V5.37</li>
-<li>STM32CubeIDE v1.14.0</li>
+<li>STM32CubeIDE v1.15.1</li>
 </ul>
 <h2 id="supported-devices-and-boards">Supported devices and boards</h2>
 <ul>
@@ -1900,7 +1910,7 @@ text-align: center;
 </div>
 </div>
 <div class="collapse">
-<input type="checkbox" id="collapse-section6" aria-hidden="true"> <label for="collapse-section6" aria-hidden="true"><strong>V3.4.0 / 21-July-2023</strong></label>
+<input type="checkbox" id="collapse-section7" aria-hidden="true"> <label for="collapse-section7" aria-hidden="true"><strong>V3.4.1 / 24-January-2024</strong></label>
 <div>
 <h2 id="main-changes-1">Main changes</h2>
 <h3 id="product-update-1">Product Update</h3>
@@ -1912,10 +1922,10 @@ text-align: center;
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Add SATEL-VL53L4ED application examples</td>
+<td style="text-align: left;">Reworked examples to remove RTC (badly enabled but no use)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Add 53L4A3_MultiSensorRanging, 53L4A3_SimpleRanging and 53L4A3_ThresholdDetection application examples</td>
+<td style="text-align: left;">Removed erroneous I2C_RST pin assignment in VL53L8 examples</td>
 </tr>
 </tbody>
 </table>
@@ -2232,7 +2242,7 @@ text-align: center;
 <ul>
 <li>IAR System Workbench V9.20.1</li>
 <li>ARM Keil V5.37</li>
-<li>STM32CubeIDE v1.13.0</li>
+<li>STM32CubeIDE v1.14.0</li>
 </ul>
 <h2 id="supported-devices-and-boards-1">Supported devices and boards</h2>
 <ul>
@@ -2268,13 +2278,13 @@ text-align: center;
 <h2 id="dependencies-1">Dependencies</h2>
 <p>This projects release is compatible with:</p>
 <ul>
-<li>STM32CubeHAL F4 V1.8.0</li>
+<li>STM32CubeHAL F4 V1.8.2</li>
 <li>STM32CubeHAL L4 V1.13.4</li>
 </ul>
 </div>
 </div>
 <div class="collapse">
-<input type="checkbox" id="collapse-section5" aria-hidden="true"> <label for="collapse-section5" aria-hidden="true"><strong>V3.3.1 / 24-May-2023</strong></label>
+<input type="checkbox" id="collapse-section6" aria-hidden="true"> <label for="collapse-section6" aria-hidden="true"><strong>V3.4.0 / 21-July-2023</strong></label>
 <div>
 <h2 id="main-changes-2">Main changes</h2>
 <h3 id="product-update-2">Product Update</h3>
@@ -2286,10 +2296,10 @@ text-align: center;
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Addition of the example selector</td>
+<td style="text-align: left;">Add SATEL-VL53L4ED application examples</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Updates components drivers for minor fixes</td>
+<td style="text-align: left;">Add 53L4A3_MultiSensorRanging, 53L4A3_SimpleRanging and 53L4A3_ThresholdDetection application examples</td>
 </tr>
 </tbody>
 </table>
@@ -2351,63 +2361,83 @@ text-align: center;
 </tr>
 <tr class="even">
 <td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L4A3/53L4A3_MultiSensorRanging">53L4A3_MultiSensorRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L4A3/53L4A3_MultiSensorRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L4A3/53L4A3_SimpleRanging">53L4A3_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L4A3/53L4A3_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L4A3/53L4A3_ThresholdDetection">53L4A3_ThresholdDetection</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L4A3/53L4A3_ThresholdDetection/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L5A1/53L5A1_MultiSensorRanging">53L5A1_MultiSensorRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L5A1/53L5A1_MultiSensorRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">NUCLEO-F401RE</td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L5A1/53L5A1_SimpleRanging">53L5A1_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L5A1/53L5A1_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">NUCLEO-F401RE</td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L5A1/53L5A1_ThresholdDetection">53L5A1_ThresholdDetection</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L5A1/53L5A1_ThresholdDetection/readme.html">readme.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">NUCLEO-F401RE</td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L7A1/53L7A1_MultiSensorRanging">53L7A1_MultiSensorRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L7A1/53L7A1_MultiSensorRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">NUCLEO-F401RE</td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L7A1/53L7A1_SimpleRanging">53L7A1_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L7A1/53L7A1_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">NUCLEO-F401RE</td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L7A1/53L7A1_ThresholdDetection">53L7A1_ThresholdDetection</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L7A1/53L7A1_ThresholdDetection/readme.html">readme.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">NUCLEO-F401RE</td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L8A1/53L8A1_SimpleRanging">53L8A1_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L8A1/53L8A1_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">NUCLEO-F401RE</td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L8A1/53L8A1_ThresholdDetection">53L8A1_ThresholdDetection</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L8A1/53L8A1_ThresholdDetection/readme.html">readme.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">NUCLEO-F401RE</td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L1CB_SimpleRanging">VL53L1CB_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L1CB_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">NUCLEO-F401RE</td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L3CX_SimpleRanging">VL53L3CX_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L3CX_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">NUCLEO-F401RE</td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L4CD_SimpleRanging">VL53L4CD_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L4CD_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">NUCLEO-F401RE</td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L4CX_SimpleRanging">VL53L4CX_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L4CX_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L4ED_SimpleRanging">VL53L4ED_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L4ED_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">NUCLEO-F401RE</td>
@@ -2455,7 +2485,7 @@ text-align: center;
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A1/53L4A1_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;">NUCLEO-F401RE</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A1/53L4A1_ThresholdDetection">53L4A1_ThresholdDetection</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A1/53L4A1_ThresholdDetection/readme.html">readme.html</a></td>
 </tr>
@@ -2471,57 +2501,77 @@ text-align: center;
 </tr>
 <tr class="even">
 <td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A3/53L4A3_MultiSensorRanging">53L4A3_MultiSensorRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A3/53L4A3_MultiSensorRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A3/53L4A3_SimpleRanging">53L4A3_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A3/53L4A3_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A3/53L4A3_ThresholdDetection">53L4A3_ThresholdDetection</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A3/53L4A3_ThresholdDetection/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L5A1/53L5A1_MultiSensorRanging">53L5A1_MultiSensorRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L5A1/53L5A1_MultiSensorRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L5A1/53L5A1_SimpleRanging">53L5A1_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L5A1/53L5A1_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L5A1/53L5A1_ThresholdDetection">53L5A1_ThresholdDetection</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L5A1/53L5A1_ThresholdDetection/readme.html">readme.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L7A1/53L7A1_MultiSensorRanging">53L7A1_MultiSensorRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L7A1/53L7A1_MultiSensorRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L7A1/53L7A1_SimpleRanging">53L7A1_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L7A1/53L7A1_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L7A1/53L7A1_ThresholdDetection">53L7A1_ThresholdDetection</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L7A1/53L7A1_ThresholdDetection/readme.html">readme.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L8A1/53L8A1_SimpleRanging">53L8A1_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L8A1/53L8A1_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L8A1/53L8A1_ThresholdDetection">53L8A1_ThresholdDetection</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L8A1/53L8A1_ThresholdDetection/readme.html">readme.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/CUSTOM/VL53L1CB_SimpleRanging">VL53L1CB_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/CUSTOM/VL53L1CB_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/CUSTOM/VL53L3CX_SimpleRanging">VL53L3CX_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/CUSTOM/VL53L3CX_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">NUCLEO-L476RG</td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/CUSTOM/VL53L4CD_SimpleRanging">VL53L4CX_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/CUSTOM/VL53L4CD_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/CUSTOM/VL53L4CD_SimpleRanging">VL53L4ED_SimpleRanging</a></td>
 <td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/CUSTOM/VL53L4CD_SimpleRanging/readme.html">readme.html</a></td>
 </tr>
 <tr class="odd">
@@ -2555,10 +2605,10 @@ text-align: center;
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">The 53L4A2_MultiSensorRanging, 53L3A2_MultiSensorRanging and 53L1A2_MultiSensorRanging sample applications don’t support multi target detection</td>
+<td style="text-align: left;">The 53L4A2_MultiSensorRanging, 53L3A2_MultiSensorRanging and 53L1A2_MultiSensorRanging application examples don’t support multi target detection</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">When generating projects for STM32U5 it is possible that you will encounter compilation errors related to missing BUS_I2C1_SDA_GPIO_PORT and BUS_I2C1_SDA_GPIO_PIN symbols in custom_bus.h. When manually adding BUS_I2C1_SDA_GPIO_PORT and BUS_I2C1_SDA_GPIO_PIN the application compiles without errors.</td>
+<td style="text-align: left;">When generating projects for STM32U5, user may encounter compilation errors related to missing BUS_I2C1_SDA_GPIO_PORT and BUS_I2C1_SDA_GPIO_PIN symbols in custom_bus.h. When manually adding BUS_I2C1_SDA_GPIO_PORT and BUS_I2C1_SDA_GPIO_PIN the application compiles without errors.</td>
 </tr>
 </tbody>
 </table>
@@ -2566,7 +2616,7 @@ text-align: center;
 <ul>
 <li>IAR System Workbench V9.20.1</li>
 <li>ARM Keil V5.37</li>
-<li>STM32CubeIDE v1.12.0</li>
+<li>STM32CubeIDE v1.13.0</li>
 </ul>
 <h2 id="supported-devices-and-boards-2">Supported devices and boards</h2>
 <ul>
@@ -2576,6 +2626,7 @@ text-align: center;
 <li>VL53L3CX</li>
 <li>VL53L4CD</li>
 <li>VL53L4CX</li>
+<li>VL53L4ED</li>
 <li>VL53L5CX</li>
 <li>VL53L7CX</li>
 <li>VL53L8CX</li>
@@ -2583,6 +2634,7 @@ text-align: center;
 <li>X-NUCLEO-53L3A2</li>
 <li>X-NUCLEO-53L4A1</li>
 <li>X-NUCLEO-53L4A2</li>
+<li>X-NUCLEO-53L4A3</li>
 <li>X-NUCLEO-53L5A1</li>
 <li>X-NUCLEO-53L7A1</li>
 <li>X-NUCLEO-53L8A1</li>
@@ -2590,6 +2642,7 @@ text-align: center;
 <li>VL53L3CX-SATEL</li>
 <li>SATEL-VL53L4CD</li>
 <li>SATEL-VL53L4CX</li>
+<li>SATEL-VL53L4ED</li>
 <li>VL53L5CX-SATEL</li>
 <li>SATEL-VL53L7CX</li>
 <li>SATEL-VL53L8</li>
@@ -2600,12 +2653,12 @@ text-align: center;
 <p>This projects release is compatible with:</p>
 <ul>
 <li>STM32CubeHAL F4 V1.8.0</li>
-<li>STM32CubeHAL L4 V1.13.2</li>
+<li>STM32CubeHAL L4 V1.13.4</li>
 </ul>
 </div>
 </div>
 <div class="collapse">
-<input type="checkbox" id="collapse-section4" aria-hidden="true"> <label for="collapse-section4" aria-hidden="true"><strong>V3.3.0 / 03-February-2023</strong></label>
+<input type="checkbox" id="collapse-section5" aria-hidden="true"> <label for="collapse-section5" aria-hidden="true"><strong>V3.3.1 / 24-May-2023</strong></label>
 <div>
 <h2 id="main-changes-3">Main changes</h2>
 <h3 id="product-update-3">Product Update</h3>
@@ -2617,10 +2670,10 @@ text-align: center;
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Add SATEL-VL53L8CX example application</td>
+<td style="text-align: left;">Addition of the example selector</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Add 53L8A1_SimpleRanging and 53L8A1_ThresholdDetection example applications</td>
+<td style="text-align: left;">Updates components drivers for minor fixes</td>
 </tr>
 </tbody>
 </table>
@@ -2897,7 +2950,7 @@ text-align: center;
 <ul>
 <li>IAR System Workbench V9.20.1</li>
 <li>ARM Keil V5.37</li>
-<li>STM32CubeIDE v1.11.0</li>
+<li>STM32CubeIDE v1.12.0</li>
 </ul>
 <h2 id="supported-devices-and-boards-3">Supported devices and boards</h2>
 <ul>
@@ -2936,10 +2989,341 @@ text-align: center;
 </div>
 </div>
 <div class="collapse">
-<input type="checkbox" id="collapse-section3" aria-hidden="true"> <label for="collapse-section3" aria-hidden="true"><strong>V3.2.0 / September 26th 2022</strong></label>
+<input type="checkbox" id="collapse-section4" aria-hidden="true"> <label for="collapse-section4" aria-hidden="true"><strong>V3.3.0 / 03-February-2023</strong></label>
 <div>
 <h2 id="main-changes-4">Main changes</h2>
 <h3 id="product-update-4">Product Update</h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Add SATEL-VL53L8CX example application</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Add 53L8A1_SimpleRanging and 53L8A1_ThresholdDetection example applications</td>
+</tr>
+</tbody>
+</table>
+<h2 id="contents-4">Contents</h2>
+<p>Projects</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Board</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">readme</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L1A2/53L1A2_MultiSensorRanging">53L1A2_MultiSensorRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L1A2/53L1A2_MultiSensorRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L1A2/53L1A2_SimpleRanging">53L1A2_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L1A2/53L1A2_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L3A2/53L3A2_MultiSensorRanging">53L3A2_MultiSensorRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L3A2/53L3A2_MultiSensorRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L3A2/53L3A2_SimpleRanging">53L3A2_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L3A2/53L3A2_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L4A1/53L4A1_MultiSensorRanging">53L4A1_MultiSensorRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L4A1/53L4A1_MultiSensorRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L4A1/53L4A1_SimpleRanging">53L4A1_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L4A1/53L4A1_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L4A1/53L4A1_ThresholdDetection">53L4A1_ThresholdDetection</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L4A1/53L4A1_ThresholdDetection/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L4A2/53L4A2_MultiSensorRanging">53L4A2_MultiSensorRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L4A2/53L4A2_MultiSensorRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L4A2/53L4A2_SimpleRanging">53L4A2_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L4A2/53L4A2_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L5A1/53L5A1_MultiSensorRanging">53L5A1_MultiSensorRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L5A1/53L5A1_MultiSensorRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L5A1/53L5A1_SimpleRanging">53L5A1_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L5A1/53L5A1_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L5A1/53L5A1_ThresholdDetection">53L5A1_ThresholdDetection</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L5A1/53L5A1_ThresholdDetection/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L7A1/53L7A1_MultiSensorRanging">53L7A1_MultiSensorRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L7A1/53L7A1_MultiSensorRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L7A1/53L7A1_SimpleRanging">53L7A1_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L7A1/53L7A1_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L7A1/53L7A1_ThresholdDetection">53L7A1_ThresholdDetection</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L7A1/53L7A1_ThresholdDetection/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L8A1/53L8A1_SimpleRanging">53L8A1_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L8A1/53L8A1_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L8A1/53L8A1_ThresholdDetection">53L8A1_ThresholdDetection</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/53L8A1/53L8A1_ThresholdDetection/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L1CB_SimpleRanging">VL53L1CB_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L1CB_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L3CX_SimpleRanging">VL53L3CX_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L3CX_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L4CD_SimpleRanging">VL53L4CD_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L4CD_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L4CX_SimpleRanging">VL53L4CX_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L4CX_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L5CX_SimpleRanging">VL53L5CX_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L5CX_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L7CX_SimpleRanging">VL53L7CX_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L7CX_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-F401RE</td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L8CX_SimpleRanging">VL53L8CX_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-F401RE/Examples/CUSTOM/VL53L8CX_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L1A2/53L1A2_MultiSensorRanging">53L1A2_MultiSensorRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L1A2/53L1A2_MultiSensorRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L1A2/53L1A2_SimpleRanging">53L1A2_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L1A2/53L1A2_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L3A2/53L3A2_MultiSensorRanging">53L3A2_MultiSensorRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L3A2/53L3A2_MultiSensorRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L3A2/53L3A2_SimpleRanging">53L3A2_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L3A2/53L3A2_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A1/53L4A1_MultiSensorRanging">53L4A1_MultiSensorRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A1/53L4A1_MultiSensorRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A1/53L4A1_SimpleRanging">53L4A1_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A1/53L4A1_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A1/53L4A1_ThresholdDetection">53L4A1_ThresholdDetection</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A1/53L4A1_ThresholdDetection/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A2/53L4A2_MultiSensorRanging">53L4A2_MultiSensorRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A2/53L4A2_MultiSensorRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A2/53L4A2_SimpleRanging">53L4A2_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L4A2/53L4A2_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L5A1/53L5A1_MultiSensorRanging">53L5A1_MultiSensorRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L5A1/53L5A1_MultiSensorRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L5A1/53L5A1_SimpleRanging">53L5A1_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L5A1/53L5A1_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L5A1/53L5A1_ThresholdDetection">53L5A1_ThresholdDetection</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L5A1/53L5A1_ThresholdDetection/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L7A1/53L7A1_MultiSensorRanging">53L7A1_MultiSensorRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L7A1/53L7A1_MultiSensorRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L7A1/53L7A1_SimpleRanging">53L7A1_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L7A1/53L7A1_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L7A1/53L7A1_ThresholdDetection">53L7A1_ThresholdDetection</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L7A1/53L7A1_ThresholdDetection/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L8A1/53L8A1_SimpleRanging">53L8A1_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L8A1/53L8A1_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L8A1/53L8A1_ThresholdDetection">53L8A1_ThresholdDetection</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/53L8A1/53L8A1_ThresholdDetection/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/CUSTOM/VL53L1CB_SimpleRanging">VL53L1CB_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/CUSTOM/VL53L1CB_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/CUSTOM/VL53L3CX_SimpleRanging">VL53L3CX_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/CUSTOM/VL53L3CX_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/CUSTOM/VL53L4CD_SimpleRanging">VL53L4CX_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/CUSTOM/VL53L4CD_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/CUSTOM/VL53L5CX_SimpleRanging">VL53L5CX_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/CUSTOM/VL53L5CX_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/CUSTOM/VL53L5CX_SimpleRanging">VL53L5CX_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/CUSTOM/VL53L5CX_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/CUSTOM/VL53L7CX_SimpleRanging">VL53L7CX_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/CUSTOM/VL53L7CX_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NUCLEO-L476RG</td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/CUSTOM/VL53L8CX_SimpleRanging">VL53L8CX_SimpleRanging</a></td>
+<td style="text-align: left;"><a href="./NUCLEO-L476RG/Examples/CUSTOM/VL53L8CX_SimpleRanging/readme.html">readme.html</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="known-limitations-4">Known limitations</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">The 53L4A2_MultiSensorRanging, 53L3A2_MultiSensorRanging and 53L1A2_MultiSensorRanging sample applications don’t support multi target detection</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">When generating projects for STM32U5 it is possible that you will encounter compilation errors related to missing BUS_I2C1_SDA_GPIO_PORT and BUS_I2C1_SDA_GPIO_PIN symbols in custom_bus.h. When manually adding BUS_I2C1_SDA_GPIO_PORT and BUS_I2C1_SDA_GPIO_PIN the application compiles without errors.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="development-toolchains-and-compilers-4">Development toolchains and compilers</h2>
+<ul>
+<li>IAR System Workbench V9.20.1</li>
+<li>ARM Keil V5.37</li>
+<li>STM32CubeIDE v1.11.0</li>
+</ul>
+<h2 id="supported-devices-and-boards-4">Supported devices and boards</h2>
+<ul>
+<li>NUCLEO-F401RE MB1136 rev.C</li>
+<li>NUCLEO-L476RG MB1136 rev.C</li>
+<li>VL53L1CB</li>
+<li>VL53L3CX</li>
+<li>VL53L4CD</li>
+<li>VL53L4CX</li>
+<li>VL53L5CX</li>
+<li>VL53L7CX</li>
+<li>VL53L8CX</li>
+<li>X-NUCLEO-53L1A2</li>
+<li>X-NUCLEO-53L3A2</li>
+<li>X-NUCLEO-53L4A1</li>
+<li>X-NUCLEO-53L4A2</li>
+<li>X-NUCLEO-53L5A1</li>
+<li>X-NUCLEO-53L7A1</li>
+<li>X-NUCLEO-53L8A1</li>
+<li>VL53L1-SATEL</li>
+<li>VL53L3CX-SATEL</li>
+<li>SATEL-VL53L4CD</li>
+<li>SATEL-VL53L4CX</li>
+<li>VL53L5CX-SATEL</li>
+<li>SATEL-VL53L7CX</li>
+<li>SATEL-VL53L8</li>
+</ul>
+<h2 id="backward-compatibility-4">Backward compatibility</h2>
+<p>N/A</p>
+<h2 id="dependencies-4">Dependencies</h2>
+<p>This projects release is compatible with:</p>
+<ul>
+<li>STM32CubeHAL F4 V1.8.0</li>
+<li>STM32CubeHAL L4 V1.13.2</li>
+</ul>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section3" aria-hidden="true"> <label for="collapse-section3" aria-hidden="true"><strong>V3.2.0 / September 26th 2022</strong></label>
+<div>
+<h2 id="main-changes-5">Main changes</h2>
+<h3 id="product-update-5">Product Update</h3>
 <table>
 <thead>
 <tr class="header">
@@ -2955,7 +3339,7 @@ text-align: center;
 </tr>
 </tbody>
 </table>
-<h2 id="contents-4">Contents</h2>
+<h2 id="contents-5">Contents</h2>
 <p>Projects</p>
 <table>
 <thead>
@@ -3178,7 +3562,7 @@ text-align: center;
 </tr>
 </tbody>
 </table>
-<h2 id="known-limitations-4">Known limitations</h2>
+<h2 id="known-limitations-5">Known limitations</h2>
 <table>
 <thead>
 <tr class="header">
@@ -3194,13 +3578,13 @@ text-align: center;
 </tr>
 </tbody>
 </table>
-<h2 id="development-toolchains-and-compilers-4">Development toolchains and compilers</h2>
+<h2 id="development-toolchains-and-compilers-5">Development toolchains and compilers</h2>
 <ul>
 <li>IAR System Workbench V9.20.1</li>
 <li>ARM Keil V5.37</li>
 <li>STM32CubeIDE v1.10.1</li>
 </ul>
-<h2 id="supported-devices-and-boards-4">Supported devices and boards</h2>
+<h2 id="supported-devices-and-boards-5">Supported devices and boards</h2>
 <ul>
 <li>NUCLEO-F401RE MB1136 rev.C</li>
 <li>NUCLEO-L476RG MB1136 rev.C</li>
@@ -3223,9 +3607,9 @@ text-align: center;
 <li>VL53L5CX-SATEL</li>
 <li>SATEL-VL53L7CX</li>
 </ul>
-<h2 id="backward-compatibility-4">Backward compatibility</h2>
+<h2 id="backward-compatibility-5">Backward compatibility</h2>
 <p>N/A</p>
-<h2 id="dependencies-4">Dependencies</h2>
+<h2 id="dependencies-5">Dependencies</h2>
 <p>This projects release is compatible with:</p>
 <ul>
 <li>STM32CubeHAL F4 V1.8.0</li>
@@ -3236,8 +3620,8 @@ text-align: center;
 <div class="collapse">
 <input type="checkbox" id="collapse-section2" aria-hidden="true"> <label for="collapse-section2" aria-hidden="true"><strong>V3.1.0 / March 4th 2022</strong></label>
 <div>
-<h2 id="main-changes-5">Main changes</h2>
-<h3 id="product-update-5">Product Update</h3>
+<h2 id="main-changes-6">Main changes</h2>
+<h3 id="product-update-6">Product Update</h3>
 <table>
 <thead>
 <tr class="header">
@@ -3262,7 +3646,7 @@ text-align: center;
 </tr>
 </tbody>
 </table>
-<h2 id="contents-5">Contents</h2>
+<h2 id="contents-6">Contents</h2>
 <p>Projects</p>
 <table>
 <thead>
@@ -3445,7 +3829,7 @@ text-align: center;
 </tr>
 </tbody>
 </table>
-<h2 id="known-limitations-5">Known limitations</h2>
+<h2 id="known-limitations-6">Known limitations</h2>
 <table>
 <thead>
 <tr class="header">
@@ -3461,13 +3845,13 @@ text-align: center;
 </tr>
 </tbody>
 </table>
-<h2 id="development-toolchains-and-compilers-5">Development toolchains and compilers</h2>
+<h2 id="development-toolchains-and-compilers-6">Development toolchains and compilers</h2>
 <ul>
 <li>IAR System Workbench V9.20.1</li>
 <li>ARM Keil V5.32</li>
 <li>STM32CubeIDE v1.8.0</li>
 </ul>
-<h2 id="supported-devices-and-boards-5">Supported devices and boards</h2>
+<h2 id="supported-devices-and-boards-6">Supported devices and boards</h2>
 <ul>
 <li>NUCLEO-F401RE MB1136 rev.C</li>
 <li>NUCLEO-L476RG MB1136 rev.C</li>
@@ -3487,9 +3871,9 @@ text-align: center;
 <li>SATEL-VL53L4CX</li>
 <li>VL53L5CX-SATEL</li>
 </ul>
-<h2 id="backward-compatibility-5">Backward compatibility</h2>
+<h2 id="backward-compatibility-6">Backward compatibility</h2>
 <p>N/A</p>
-<h2 id="dependencies-5">Dependencies</h2>
+<h2 id="dependencies-6">Dependencies</h2>
 <p>This projects release is compatible with:</p>
 <ul>
 <li>STM32CubeHAL F4 V1.7.12</li>
@@ -3500,8 +3884,8 @@ text-align: center;
 <div class="collapse">
 <input type="checkbox" id="collapse-section1" aria-hidden="true"> <label for="collapse-section1" aria-hidden="true"><strong>V3.0.0 / January 12th 2022</strong></label>
 <div>
-<h2 id="main-changes-6">Main changes</h2>
-<h3 id="product-update-6">Product Update</h3>
+<h2 id="main-changes-7">Main changes</h2>
+<h3 id="product-update-7">Product Update</h3>
 <table>
 <thead>
 <tr class="header">
@@ -3532,7 +3916,7 @@ text-align: center;
 </tr>
 </tbody>
 </table>
-<h2 id="contents-6">Contents</h2>
+<h2 id="contents-7">Contents</h2>
 <p>Projects</p>
 <table>
 <thead>
@@ -3645,7 +4029,7 @@ text-align: center;
 </tr>
 </tbody>
 </table>
-<h2 id="known-limitations-6">Known limitations</h2>
+<h2 id="known-limitations-7">Known limitations</h2>
 <table>
 <thead>
 <tr class="header">
@@ -3661,13 +4045,13 @@ text-align: center;
 </tr>
 </tbody>
 </table>
-<h2 id="development-toolchains-and-compilers-6">Development toolchains and compilers</h2>
+<h2 id="development-toolchains-and-compilers-7">Development toolchains and compilers</h2>
 <ul>
 <li>IAR System Workbench V8.50.9</li>
 <li>ARM Keil V5.32</li>
 <li>STM32CubeIDE v1.8.0</li>
 </ul>
-<h2 id="supported-devices-and-boards-6">Supported devices and boards</h2>
+<h2 id="supported-devices-and-boards-7">Supported devices and boards</h2>
 <ul>
 <li>NUCLEO-F401RE MB1136 rev.C</li>
 <li>NUCLEO-L476RG MB1136 rev.C</li>
@@ -3681,9 +4065,9 @@ text-align: center;
 <li>VL53L3CX-SATEL</li>
 <li>VL53L5CX-SATEL</li>
 </ul>
-<h2 id="backward-compatibility-6">Backward compatibility</h2>
+<h2 id="backward-compatibility-7">Backward compatibility</h2>
 <p>N/A</p>
-<h2 id="dependencies-6">Dependencies</h2>
+<h2 id="dependencies-7">Dependencies</h2>
 <p>This projects release is compatible with:</p>
 <ul>
 <li>STM32CubeHAL F4 V1.7.12</li>

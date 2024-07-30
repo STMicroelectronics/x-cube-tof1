@@ -331,15 +331,7 @@ int32_t VL53L4A3_RANGING_SENSOR_SetAddress(uint32_t Instance, uint32_t Address)
   {
     ret = BSP_ERROR_WRONG_PARAM;
   }
-  else if (VL53L4A3_RANGING_SENSOR_Drv->DeInit(VL53L4A3_RANGING_SENSOR_CompObj[Instance]) != VL53L4ED_OK)
-  {
-    ret = BSP_ERROR_COMPONENT_FAILURE;
-  }
   else if (VL53L4A3_RANGING_SENSOR_Drv->SetAddress(VL53L4A3_RANGING_SENSOR_CompObj[Instance], Address) < 0)
-  {
-    ret = BSP_ERROR_COMPONENT_FAILURE;
-  }
-  else if (VL53L4A3_RANGING_SENSOR_Drv->Init(VL53L4A3_RANGING_SENSOR_CompObj[Instance]) != VL53L4ED_OK)
   {
     ret = BSP_ERROR_COMPONENT_FAILURE;
   }

@@ -2370,9 +2370,10 @@ UPDATE_DYNAMIC_CONFIG:
 				VL53LX_TRACE_MODULE_HISTOGRAM_DATA);
 #endif
 
-		if (pdev->tuning_parms.tp_hist_merge == 1)
-			pC->algo__crosstalk_compensation_plane_offset_kcps =
-				pXCR->algo__xtalk_cpo_HistoMerge_kcps[0];
+		if ((pdev->tuning_parms.tp_hist_merge == 1) &&
+			(histo_merge_nb != 0))
+			pC->algo__crosstalk_compensation_plane_offset_kcps /=
+				histo_merge_nb;
 	} else {
 
 		if (status == VL53LX_ERROR_NONE)

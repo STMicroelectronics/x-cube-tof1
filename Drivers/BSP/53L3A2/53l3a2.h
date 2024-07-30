@@ -50,7 +50,6 @@ enum VL53L3A2_dev_e
 int32_t VL53L3A2_Init(void);
 int32_t VL53L3A2_DeInit(void);
 int32_t VL53L3A2_ResetId(uint8_t DevNo,  uint8_t state);
-int32_t VL53L3A2_SetDisplayString(const char *str);
 /** 
  * @} 
  */

@@ -167,7 +167,7 @@ done:
     return Status;
 }
 
-uint8_t WaitMs(
+uint8_t VL53L4ED_WaitMs(
 		Dev_t Dev,
 		uint32_t TimeMs)
 {

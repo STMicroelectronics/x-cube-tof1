@@ -3,7 +3,7 @@
   * @file          : app_tof.c
   * @author        : IMG SW Application Team
   * @brief         : This file provides code for the configuration
-  *                  of the STMicroelectronics.X-CUBE-TOF1.3.4.1 instances.
+  *                  of the STMicroelectronics.X-CUBE-TOF1.3.4.2 instances.
   ******************************************************************************
   *
   * @attention
@@ -36,8 +36,8 @@ extern "C" {
 /* uncomment following to use directly the bare driver instead of the BSP */
 /* #define USE_BARE_DRIVER */
 #define TIMING_BUDGET (30U) /* 5 ms < TimingBudget < 100 ms */
-#define RANGING_FREQUENCY (5U) /* Ranging frequency Hz (shall be consistent with TimingBudget value) */
-#define POLLING_PERIOD (1000U/RANGING_FREQUENCY) /* refresh rate for polling mode (milliseconds) */
+#define RANGING_FREQUENCY (10U) /* Ranging frequency Hz (shall be consistent with TimingBudget value) */
+#define POLLING_PERIOD (1)
 
 /* Private variables ---------------------------------------------------------*/
 #ifndef USE_BARE_DRIVER
@@ -73,9 +73,6 @@ void MX_TOF_Init(void)
 
   /* USER CODE BEGIN TOF_Init_PreTreatment */
 
-  /* arbitrary wait after XShutdown to allow switch on */
-  HAL_Delay(1);
-
   /* USER CODE END TOF_Init_PreTreatment */
 
   /* Initialize the peripherals and the TOF components */
@@ -107,6 +104,9 @@ static void MX_VL53L7CX_SimpleRanging_Init(void)
 {
   /* Initialize Virtual COM Port */
   BSP_COM_Init(COM1);
+
+  printf("\033[2H\033[2J");
+  printf("Sensor initialization...\n");
 
   status = CUSTOM_RANGING_SENSOR_Init(CUSTOM_VL53L7CX);
 

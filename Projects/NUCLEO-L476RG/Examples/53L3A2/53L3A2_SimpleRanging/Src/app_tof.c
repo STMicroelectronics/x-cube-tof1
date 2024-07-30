@@ -3,7 +3,7 @@
   * @file          : app_tof.c
   * @author        : IMG SW Application Team
   * @brief         : This file provides code for the configuration
-  *                  of the STMicroelectronics.X-CUBE-TOF1.3.4.1 instances.
+  *                  of the STMicroelectronics.X-CUBE-TOF1.3.4.2 instances.
   ******************************************************************************
   *
   * @attention
@@ -58,9 +58,6 @@ void MX_TOF_Init(void)
 
   /* USER CODE BEGIN TOF_Init_PreTreatment */
 
-  /* arbitrary wait after XShutdown to allow switch on */
-  HAL_Delay(1);
-
   /* USER CODE END TOF_Init_PreTreatment */
 
   /* Initialize the peripherals and the TOF components */
@@ -95,6 +92,12 @@ static void MX_53L3A2_SimpleRanging_Init(void)
 
   /* Initialize button */
   BSP_PB_Init(BUTTON_KEY, BUTTON_MODE_EXTI);
+
+  /* reset XSHUT (XSDN) pin */
+  VL53L3A2_RANGING_SENSOR_SetPowerMode(VL53L3A2_DEV_CENTER, RANGING_SENSOR_POWERMODE_OFF);
+  HAL_Delay(2);
+  VL53L3A2_RANGING_SENSOR_SetPowerMode(VL53L3A2_DEV_CENTER, RANGING_SENSOR_POWERMODE_ON);
+  HAL_Delay(2);
 
   printf("53L3A2 Simple Ranging demo application\n");
   status = VL53L3A2_RANGING_SENSOR_Init(VL53L3A2_DEV_CENTER);

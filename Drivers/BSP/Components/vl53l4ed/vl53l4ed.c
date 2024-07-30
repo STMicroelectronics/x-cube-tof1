@@ -507,6 +507,7 @@ int32_t VL53L4ED_SetAddress(VL53L4ED_Object_t *pObj, uint32_t Address)
   else
   {
     pObj->IO.Address = (uint8_t)(Address & 0xFFU);
+    VL53L4ED_SensorInit(pObj);
     ret = VL53L4ED_OK;
   }
 

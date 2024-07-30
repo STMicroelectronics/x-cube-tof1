@@ -213,10 +213,10 @@ int32_t VL53L7CX_ReadID(VL53L7CX_Object_t *pObj, uint32_t *pId)
   }
   else
   {
-    status |= WrByte(&pObj->Dev.platform, 0x7fff, 0x00);
-    status |= RdByte(&pObj->Dev.platform, 0, &device_id);
-    status |= RdByte(&pObj->Dev.platform, 1, &revision_id);
-    status |= WrByte(&pObj->Dev.platform, 0x7fff, 0x02);
+    status |= VL53L7CX_WrByte(&pObj->Dev.platform, 0x7fff, 0x00);
+    status |= VL53L7CX_RdByte(&pObj->Dev.platform, 0, &device_id);
+    status |= VL53L7CX_RdByte(&pObj->Dev.platform, 1, &revision_id);
+    status |= VL53L7CX_WrByte(&pObj->Dev.platform, 0x7fff, 0x02);
 
     if (status == 0U)
     {

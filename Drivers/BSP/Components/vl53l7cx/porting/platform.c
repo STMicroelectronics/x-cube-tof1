@@ -12,7 +12,7 @@
 
 #include "platform.h"
 
-uint8_t RdByte(
+uint8_t VL53L7CX_RdByte(
 		VL53L7CX_Platform *p_platform,
 		uint16_t RegisterAdress,
 		uint8_t *p_value)
@@ -20,7 +20,7 @@ uint8_t RdByte(
   return p_platform->Read(p_platform->address, RegisterAdress, p_value, 1U);
 }
 
-uint8_t WrByte(
+uint8_t VL53L7CX_WrByte(
 		VL53L7CX_Platform *p_platform,
 		uint16_t RegisterAdress,
 		uint8_t value)
@@ -28,7 +28,7 @@ uint8_t WrByte(
   return p_platform->Write(p_platform->address, RegisterAdress, &value, 1U);
 }
 
-uint8_t WrMulti(
+uint8_t VL53L7CX_WrMulti(
 		VL53L7CX_Platform *p_platform,
 		uint16_t RegisterAdress,
 		uint8_t *p_values,
@@ -37,7 +37,7 @@ uint8_t WrMulti(
   return p_platform->Write(p_platform->address, RegisterAdress, p_values, size);
 }
 
-uint8_t RdMulti(
+uint8_t VL53L7CX_RdMulti(
 		VL53L7CX_Platform *p_platform,
 		uint16_t RegisterAdress,
 		uint8_t *p_values,
@@ -46,7 +46,7 @@ uint8_t RdMulti(
   return p_platform->Read(p_platform->address, RegisterAdress, p_values, size);
 }
 
-void SwapBuffer(
+void VL53L7CX_SwapBuffer(
     uint8_t     *buffer,
     uint16_t     size)
 {
@@ -65,7 +65,7 @@ void SwapBuffer(
   }
 }
 
-uint8_t WaitMs(
+uint8_t VL53L7CX_WaitMs(
 		VL53L7CX_Platform *p_platform,
 		uint32_t TimeMs)
 {

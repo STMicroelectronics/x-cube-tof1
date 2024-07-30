@@ -37,9 +37,9 @@ extern "C" {
 /** VL53LX IMPLEMENTATION minor version */
 #define VL53LX_IMPLEMENTATION_VER_MINOR       2
 /** VL53LX IMPLEMENTATION sub version */
-#define VL53LX_IMPLEMENTATION_VER_SUB         10
+#define VL53LX_IMPLEMENTATION_VER_SUB         11
 /** VL53LX IMPLEMENTATION sub version */
-#define VL53LX_IMPLEMENTATION_VER_REVISION  2610
+#define VL53LX_IMPLEMENTATION_VER_REVISION  2660
 
 /****************************************
  * PRIVATE define do not edit

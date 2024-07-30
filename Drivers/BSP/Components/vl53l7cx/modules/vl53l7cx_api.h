@@ -25,7 +25,7 @@
  * @brief Current driver version.
  */
 
-#define VL53L7CX_API_REVISION			"VL53L7CX_1.2.8"
+#define VL53L7CX_API_REVISION			"VL53L7CX_2.0.0"
 
 /**
  * @brief Default I2C address of VL53L7CX sensor. Can be changed using function
@@ -81,6 +81,7 @@
 #define VL53L7CX_STATUS_OK			((uint8_t) 0U)
 #define VL53L7CX_STATUS_TIMEOUT_ERROR		((uint8_t) 1U)
 #define VL53L7CX_STATUS_CORRUPTED_FRAME		((uint8_t) 2U)
+#define VL53L7CX_STATUS_XTALK_FAILED		((uint8_t) 4U)
 #define VL53L7CX_MCU_ERROR			((uint8_t) 66U)
 #define VL53L7CX_STATUS_INVALID_PARAM		((uint8_t) 127U)
 #define VL53L7CX_STATUS_ERROR			((uint8_t) 255U)
@@ -157,6 +158,7 @@
 #define VL53L7CX_DCI_FW_NB_TARGET		((uint16_t)0x5478)
 #define VL53L7CX_DCI_RANGING_MODE		((uint16_t)0xAD30U)
 #define VL53L7CX_DCI_DSS_CONFIG			((uint16_t)0xAD38U)
+#define VL53L7CX_DCI_VHV_CONFIG			((uint16_t)0xAD60U)
 #define VL53L7CX_DCI_TARGET_ORDER		((uint16_t)0xAE64U)
 #define VL53L7CX_DCI_SHARPENER			((uint16_t)0xAED8U)
 #define VL53L7CX_DCI_INTERNAL_CP		((uint16_t)0xB39CU)
@@ -648,6 +650,30 @@ uint8_t vl53ll7cx_enable_internal_cp(
  */
 uint8_t vl53ll7cx_disable_internal_cp(
  	      VL53L7CX_Configuration          *p_dev);
+
+/**
+ * @brief This function is used to get the number of frames between 2 temperature
+ * compensation.
+ * @param (VL53L7CX_Configuration) *p_dev : VL53L7CX configuration structure.
+ * @param (uint32_t) *p_repeat_count : Number of frames before next temperature
+ * compensation. Set to 0 to disable the feature (default configuration).
+ */
+uint8_t vl53l7cx_get_VHV_repeat_count(
+		VL53L7CX_Configuration *p_dev,
+		uint32_t *p_repeat_count);
+
+/**
+ * @brief This function is used to set a periodic temperature compensation. By
+ * setting a repeat count different to 0 the firmware automatically runs a
+ * temperature calibration every N frames.
+ * default the repeat count is set to 0
+ * @param (VL53L7CX_Configuration) *p_dev : VL53L7CX configuration structure.
+ * @param (uint32_t) repeat_count : Number of frames between temperature
+ * compensation. Set to 0 to disable the feature (default configuration).
+ */
+uint8_t vl53l7cx_set_VHV_repeat_count(
+		VL53L7CX_Configuration *p_dev,
+		uint32_t repeat_count);
 
 /**
  * @brief This function can be used to read 'extra data' from DCI. Using a known

@@ -3,7 +3,7 @@
   * @file          : app_tof.c
   * @author        : IMG SW Application Team
   * @brief         : This file provides code for the configuration
-  *                  of the STMicroelectronics.X-CUBE-TOF1.3.4.1 instances.
+  *                  of the STMicroelectronics.X-CUBE-TOF1.3.4.2 instances.
   ******************************************************************************
   *
   * @attention
@@ -58,9 +58,6 @@ void MX_TOF_Init(void)
   /* USER CODE END SV */
 
   /* USER CODE BEGIN TOF_Init_PreTreatment */
-
-  /* arbitrary wait after XShutdown to allow switch on */
-  HAL_Delay(1);
 
   /* USER CODE END TOF_Init_PreTreatment */
 

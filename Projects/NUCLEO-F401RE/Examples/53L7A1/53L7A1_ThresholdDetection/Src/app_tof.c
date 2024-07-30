@@ -3,7 +3,7 @@
   * @file          : app_tof.c
   * @author        : IMG SW Application Team
   * @brief         : This file provides code for the configuration
-  *                  of the STMicroelectronics.X-CUBE-TOF1.3.4.1 instances.
+  *                  of the STMicroelectronics.X-CUBE-TOF1.3.4.2 instances.
   ******************************************************************************
   *
   * @attention
@@ -59,7 +59,7 @@ extern "C" {
 
 /* Private define ------------------------------------------------------------*/
 #define TIMING_BUDGET (30U) /* 5 ms < TimingBudget < 100 ms */
-#define RANGING_FREQUENCY (5U) /* Ranging frequency Hz (shall be consistent with TimingBudget value) */
+#define RANGING_FREQUENCY (10U) /* Ranging frequency Hz (shall be consistent with TimingBudget value) */
 
 #define LOW_THRESHOLD  (200U)
 #define HIGH_THRESHOLD (600U)
@@ -83,9 +83,6 @@ void MX_TOF_Init(void)
   /* USER CODE END SV */
 
   /* USER CODE BEGIN TOF_Init_PreTreatment */
-
-  /* arbitrary wait after XShutdown to allow switch on */
-  HAL_Delay(1);
 
   /* USER CODE END TOF_Init_PreTreatment */
 
@@ -118,6 +115,20 @@ static void MX_53L7A1_ThresholdDetection_Init(void)
 {
   /* Initialize Virtual COM Port */
   BSP_COM_Init(COM1);
+
+  /* Sensor reset */
+  HAL_GPIO_WritePin(VL53L7A1_PWR_EN_C_PORT, VL53L7A1_PWR_EN_C_PIN, GPIO_PIN_RESET);
+  HAL_Delay(2);
+  HAL_GPIO_WritePin(VL53L7A1_PWR_EN_C_PORT, VL53L7A1_PWR_EN_C_PIN, GPIO_PIN_SET);
+  HAL_Delay(2);
+  HAL_GPIO_WritePin(VL53L7A1_LPn_C_PORT, VL53L7A1_LPn_C_PIN, GPIO_PIN_RESET);
+  HAL_Delay(2);
+  HAL_GPIO_WritePin(VL53L7A1_LPn_C_PORT, VL53L7A1_LPn_C_PIN, GPIO_PIN_SET);
+  HAL_Delay(2);
+
+  printf("\033[2H\033[2J");
+  printf("53L7A1 Threshold Detection demo application\n");
+  printf("Sensor initialization...\n");
 
   status = VL53L7A1_RANGING_SENSOR_Init(VL53L7A1_DEV_CENTER);
 
@@ -160,6 +171,12 @@ static void MX_53L7A1_ThresholdDetection_Process(void)
     printf("VL53L7A1_RANGING_SENSOR_Start failed\n");
     while (1);
   }
+
+  printf("\033[2H\033[2J");
+  printf("53L7A1 Threshold Detection demo application\n");
+  printf("-------------------------------------------\n\n");
+  printf("please put a target between %d and %d millimeters from the sensor\n",
+		  LOW_THRESHOLD, HIGH_THRESHOLD);
 
   while (1)
   {

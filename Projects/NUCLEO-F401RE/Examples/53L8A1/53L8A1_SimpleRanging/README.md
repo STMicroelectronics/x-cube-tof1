@@ -11,9 +11,9 @@ lang: en
 
 ### <b>53L8A1_SimpleRanging example description</b>
 
-This example application shows how to use the X-NUCLEO-53L8A1 expansion board and a STM32 Nucleo board 
+This example application illustrates how to use the X-NUCLEO-53L8A1 expansion board with a STM32 Nucleo board 
 to perform ranging measurements and print the results on a hyper-terminal such as TeraTerm through a serial link.
-Please refer to the user manual for more details.
+For further details, please refer to the user manual for more details.
 
 The example application uses the following default serial settings:
 
@@ -31,8 +31,8 @@ TOF, I2C, VCOM
 
   - This example runs on STM32 Nucleo boards with X-NUCLEO-53L8A1 STM32 expansion board
   - Make sure *there is NO* SATEL-VL53L8 plugged on the X-NUCLEO-53L8A1 expansion board.
-  - If you power the Nucleo board via USB 3.0 port, please check that you have flashed the last version of
-    the firmware of ST-Link v2 inside the Nucleo board. In order to flash the last available firmware of the 
+  - If you power the Nucleo board via USB 3.0 port, check that you have flashed the last firmware version of
+    the ST-Link v2 on the Nucleo board. In order to flash the latest firmware version of the 
 	ST-Link v2, you can use the STM32 ST Link Utility.
   - This example has been tested with STMicroelectronics:
     - [NUCLEO-F401RE board](https://www.st.com/en/product/nucleo-f401re.html)
@@ -42,7 +42,7 @@ ADDITIONAL_COMP : VL53L8CX https://www.st.com/en/product/vl53l8cx.html
 
 ### <b>How to use it ?</b>
 
-In order to make the program work, you must do the following:
+To ensure the program operates correctly, execute the following steps:
 
  - WARNING: before opening the project with any toolchain be sure your folder
    installation path is not too in-depth since the toolchain may report errors

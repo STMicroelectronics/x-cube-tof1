@@ -1,6 +1,6 @@
 /**
   *
-  * Copyright (c) 2021 STMicroelectronics.
+  * Copyright (c) 2023 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -20,8 +20,8 @@
  */
 
 #define VL53L4CD_IMPLEMENTATION_VER_MAJOR       2
-#define VL53L4CD_IMPLEMENTATION_VER_MINOR       1
-#define VL53L4CD_IMPLEMENTATION_VER_BUILD       1
+#define VL53L4CD_IMPLEMENTATION_VER_MINOR       2
+#define VL53L4CD_IMPLEMENTATION_VER_BUILD       0
 #define VL53L4CD_IMPLEMENTATION_VER_REVISION  	0
 
 /**

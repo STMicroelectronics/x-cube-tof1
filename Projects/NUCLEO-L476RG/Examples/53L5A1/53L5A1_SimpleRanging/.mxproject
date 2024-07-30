@@ -19,9 +19,9 @@ SourceFiles=app_tof_pin_conf.c;app_tof.c;stm32l4xx_nucleo_bus.c;stm32l4xx_nucleo
 
 [ThirdPartyIp]
 ThirdPartyIpNumber=1
-ThirdPartyIpName#0=STMicroelectronics.X-CUBE-TOF1.3.4.1
+ThirdPartyIpName#0=STMicroelectronics.X-CUBE-TOF1.3.4.2
 
-[ThirdPartyIp#STMicroelectronics.X-CUBE-TOF1.3.4.1]
+[ThirdPartyIp#STMicroelectronics.X-CUBE-TOF1.3.4.2]
 other=..\Drivers\BSP\53L5A1\LICENSE.md;..\Drivers\BSP\53L5A1\_htmresc\Add button.svg;..\Drivers\BSP\53L5A1\_htmresc\favicon.png;..\Drivers\BSP\53L5A1\_htmresc\mini-st_2020.css;..\Drivers\BSP\53L5A1\_htmresc\st_logo_2020.png;..\Drivers\BSP\53L5A1\_htmresc\Update.svg;..\Drivers\BSP\Components\vl53l5cx\LICENSE.md;..\Drivers\BSP\Components\vl53l5cx\_htmresc\Add button.svg;..\Drivers\BSP\Components\vl53l5cx\_htmresc\favicon.png;..\Drivers\BSP\Components\vl53l5cx\_htmresc\mini-st_2020.css;..\Drivers\BSP\Components\vl53l5cx\_htmresc\st_logo_2020.png;..\Drivers\BSP\Components\vl53l5cx\_htmresc\Update.svg;
 header=..\Drivers\BSP\Components\Common\ranging_sensor.h;..\Drivers\BSP\53L5A1\53l5a1_ranging_sensor.h;..\Drivers\BSP\Components\vl53l5cx\modules\vl53l5cx_api.h;..\Drivers\BSP\Components\vl53l5cx\modules\vl53l5cx_buffers.h;..\Drivers\BSP\Components\vl53l5cx\modules\vl53l5cx_plugin_detection_thresholds.h;..\Drivers\BSP\Components\vl53l5cx\modules\vl53l5cx_plugin_motion_indicator.h;..\Drivers\BSP\Components\vl53l5cx\modules\vl53l5cx_plugin_xtalk.h;..\Drivers\BSP\Components\vl53l5cx\porting\platform.h;..\Drivers\BSP\Components\vl53l5cx\vl53l5cx.h;
 doc=..\Drivers\BSP\53L5A1\LICENSE.txt;..\Drivers\BSP\Components\vl53l5cx\LICENSE.txt;..\Drivers\BSP\Components\vl53l5cx\Release_Notes.html;..\Drivers\BSP\53L5A1\Release_Notes.html;

@@ -19,9 +19,9 @@ SourceFiles=app_tof_pin_conf.c;custom_ranging_sensor.c;app_tof.c;stm32f4xx_nucle
 
 [ThirdPartyIp]
 ThirdPartyIpNumber=1
-ThirdPartyIpName#0=STMicroelectronics.X-CUBE-TOF1.3.4.1
+ThirdPartyIpName#0=STMicroelectronics.X-CUBE-TOF1.3.4.2
 
-[ThirdPartyIp#STMicroelectronics.X-CUBE-TOF1.3.4.1]
+[ThirdPartyIp#STMicroelectronics.X-CUBE-TOF1.3.4.2]
 other=..\Drivers\BSP\Components\vl53l4cd\LICENSE.md;..\Drivers\BSP\Components\vl53l4cd\_htmresc\Add button.svg;..\Drivers\BSP\Components\vl53l4cd\_htmresc\favicon.png;..\Drivers\BSP\Components\vl53l4cd\_htmresc\mini-st_2020.css;..\Drivers\BSP\Components\vl53l4cd\_htmresc\st_logo_2020.png;..\Drivers\BSP\Components\vl53l4cd\_htmresc\Update.svg;
 doc=..\Drivers\BSP\Components\vl53l4cd\LICENSE.txt;..\Drivers\BSP\Components\vl53l4cd\Release_Notes.html;
 header=..\Drivers\BSP\Components\vl53l4cd\modules\vl53l4cd_api.h;..\Drivers\BSP\Components\vl53l4cd\modules\vl53l4cd_calibration.h;..\Drivers\BSP\Components\vl53l4cd\porting\platform.h;..\Drivers\BSP\Components\vl53l4cd\vl53l4cd.h;

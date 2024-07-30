@@ -118,7 +118,7 @@ uint8_t VL53L4ED_WrDWord(
  * @return (uint8_t) status : 0 if wait is finished.
  */
 
-uint8_t WaitMs(
+uint8_t VL53L4ED_WaitMs(
 		Dev_t dev,
 		uint32_t TimeMs);
 

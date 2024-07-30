@@ -3650,7 +3650,6 @@ VL53L1_Error VL53L1_get_device_results(
 	VL53L1_histogram_bin_data_t *pHD = &(pdev->hist_data);
 	VL53L1_customer_nvm_managed_t *pN = &(pdev->customer);
 	VL53L1_zone_histograms_t *pZH = &(pres->zone_hists);
-	VL53L1_xtalk_calibration_results_t *pXCR = &(pdev->xtalk_cal);
 	uint8_t tmp8;
 	uint8_t zid;
 	uint8_t i;
@@ -3973,9 +3972,9 @@ UPDATE_DYNAMIC_CONFIG:
 				VL53L1_TRACE_MODULE_HISTOGRAM_DATA);
 #endif
 
-		if (merge_enabled)
-			pC->algo__crosstalk_compensation_plane_offset_kcps =
-				pXCR->algo__xtalk_cpo_HistoMerge_kcps[0];
+		if ((merge_enabled) && (histo_merge_nb != 0))
+			pC->algo__crosstalk_compensation_plane_offset_kcps /=
+				histo_merge_nb;
 	} else {
 
 		if (status == VL53L1_ERROR_NONE)

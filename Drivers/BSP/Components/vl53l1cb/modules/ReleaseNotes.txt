@@ -1,4 +1,41 @@
 ########################################################
+# Package ReleaseNotes: 6.6.18 rev 2652
+########################################################
+
+-- EwokPlus and EwokEvo Bare Driver
+
+	Issues fixed in this version:
+	- #1282896 L3 Dynamic xtalk live update and fine tune tuning parameter for step threshold.
+	- #1282830 Bare driver change to fix DSS error when scene change from very near to far
+	  Was already fixed in VL53L16.6.14.2622 regarding ticket #1201956 work around for DSS update with Multi-ROI mode
+	- #1286869 Build failed with Bare driver VL53L3_6.6.17.2640
+	  Deliveries/Platform/stm32 directory has been cleaned up to avoid future misuse/issue
+
+Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.6.17 rev 2640
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	Issues fixed in this version:
+	- apply only for L3 the fix dTOF_SingleZoneAppTracker #1226762
+
+Documentation .chm file updated
+
+########################################################
+# Package ReleaseNotes: 6.6.16 rev 2631
+########################################################
+
+-- EwokPlus cut 1.1 Bare Driver
+
+	Issues fixed in this version:
+	- fix bug dTOF_SingleZoneAppTracker #1226762
+
+Documentation .chm file updated
+
+########################################################
 # Package ReleaseNotes: 6.6.15 rev 2625
 ########################################################
 

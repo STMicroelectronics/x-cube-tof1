@@ -1490,7 +1490,7 @@ text-align: center;
 <div class="collapse">
 <div>
 <h3 id="vl53l7cx_simpleranging-example-description"><b>VL53L7CX_SimpleRanging example description</b></h3>
-<p>This example application shows how to use the SATEL-VL53L7CX breakout board on a STM32 Nucleo board to perform ranging measurements and print the results on a hyper-terminal such as TeraTerm through a serial link. Please refer to the user manual for more details.</p>
+<p>This example application illustrates how to use the SATEL-VL53L7CX breakout board on a STM32 Nucleo board to perform ranging measurements and print the results on a hyper-terminal such as TeraTerm through a serial link. For further details, please refer to the user manual for more details.</p>
 <p>The example application uses the following default serial settings:</p>
 <ul>
 <li>Baud Rate: 460800</li>
@@ -1509,13 +1509,13 @@ text-align: center;
 <li>SCL &lt;—&gt; D15</li>
 <li>SDA &lt;—&gt; D14</li>
 <li>INT &lt;—&gt; A2</li>
-<li>I2C_RST &lt;—&gt; A1</li>
-<li>LPn &lt;—&gt; A3</li>
-<li>PWR_EN &lt;—&gt; A5</li>
+<li>I2C_RST &lt;—&gt; D3</li>
+<li>LPn &lt;—&gt; D5</li>
+<li>PWR_EN &lt;—&gt; A3</li>
 <li>IOVDD &lt;—&gt; 3V3</li>
 <li>AVDD &lt;—&gt; 5V</li>
 </ul></li>
-<li>If you power the Nucleo board via USB 3.0 port, please check that you have flashed the last version of the firmware of ST-Link v2 inside the Nucleo board. In order to flash the last available firmware of the ST-Link v2, you can use the STM32 ST Link Utility.</li>
+<li>If you power the Nucleo board via USB 3.0 port, check that you have flashed the last firmware version of the ST-Link v2 on the Nucleo board. In order to flash the latest firmware version of the ST-Link v2, you can use the STM32 ST Link Utility.</li>
 <li>This example has been tested with STMicroelectronics:
 <ul>
 <li><a href="https://www.st.com/en/product/nucleo-l476rg.html">NUCLEO-L476RG board</a></li>
@@ -1523,7 +1523,7 @@ text-align: center;
 </ul>
 <p>ADDITIONAL_BOARD : SATEL-VL53L7CX https://www.st.com/en/product/satel-vl53l7cx.html ADDITIONAL_COMP : VL53L7CX https://www.st.com/en/product/vl53l7cx.html</p>
 <h3 id="how-to-use-it"><b>How to use it ?</b></h3>
-<p>In order to make the program work, you must do the following:</p>
+<p>To ensure the program operates correctly, execute the following steps:</p>
 <ul>
 <li>WARNING: before opening the project with any toolchain be sure your folder installation path is not too in-depth since the toolchain may report errors after building.</li>
 <li>Open STM32CubeIDE. Alternatively you can use the Keil uVision toolchain or the IAR toolchain.</li>

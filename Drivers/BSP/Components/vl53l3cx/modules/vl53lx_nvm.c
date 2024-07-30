@@ -829,7 +829,7 @@ VL53LX_Error VL53LX_nvm_decode_optical_centre(
 		return VL53LX_ERROR_BUFFER_TOO_SMALL;
 
 
-	tmp  = 0x0100;
+	tmp  = 0x00F0;
 	tmp -= (uint16_t)*(pbuffer + 2);
 	if (tmp > 0x0FF)
 		tmp = 0;

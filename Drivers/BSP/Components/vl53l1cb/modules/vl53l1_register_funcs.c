@@ -331,8 +331,14 @@ VL53L1_Error VL53L1_get_customer_nvm_managed(
 
 	VL53L1_Error status = VL53L1_ERROR_NONE;
 	uint8_t comms_buffer[VL53L1_CUSTOMER_NVM_MANAGED_I2C_SIZE_BYTES];
+	VL53L1_LLDriverData_t   *pLLData;
+	uint8_t module_type;
+	int16_t offset;
 
 	LOG_FUNCTION_START("");
+
+	pLLData =  VL53L1DevStructGetLLDriverHandle(Dev);
+	module_type = pLLData->nvm_copy_data.identification__module_type;
 
 	if (status == VL53L1_ERROR_NONE)
 		status = VL53L1_ReadMulti(
@@ -346,6 +352,17 @@ VL53L1_Error VL53L1_get_customer_nvm_managed(
 			VL53L1_CUSTOMER_NVM_MANAGED_I2C_SIZE_BYTES,
 			comms_buffer,
 			pdata);
+
+
+	if ((status == VL53L1_ERROR_NONE) && (module_type == 0xAA)) {
+		offset = pdata->algo__part_to_part_range_offset_mm;
+		offset = offset / 4;
+		if (offset >= 1024)
+			offset -= 2048;
+		pdata->algo__part_to_part_range_offset_mm = 0;
+		pdata->mm_config__inner_offset_mm = offset;
+		pdata->mm_config__outer_offset_mm = offset;
+	}
 
 	LOG_FUNCTION_END(status);
 
