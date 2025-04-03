@@ -4394,6 +4394,10 @@ VL53LX_Error VL53LX_dynamic_xtalk_correction_corrector(
 
 		xtalk_offset_out = (uint32_t)(pconfig->nodetect_xtalk_offset);
 
+		if (pdev->tuning_parms.tp_hist_merge == 1)
+			xtalk_offset_out = xtalk_offset_out *
+			(uint32_t)(pdev->tuning_parms.tp_hist_merge_max_size);
+
 		if (continue_processing == CONT_CONTINUE) {
 
 			VL53LX_dynamic_xtalk_correction_calc_new_xtalk(

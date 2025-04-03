@@ -12,6 +12,12 @@ The X-CUBE-TOF1 is an expansion software package for STM32Cube. This software is
 - Sample applications that the developer can use to start experimenting with the code.
 - Examples implementation available for X-NUCLEO-53L1A2, X-NUCLEO-53L3A2, X-NUCLEO-53L4A2, X-NUCLEO-53L4A3, X-NUCLEO-53L4A1, X-NUCLEO-53L5A1, X-NUCLEO-53L7A1 , X-NUCLEO-53L8A1 STM32 expansion boards plugged on top of one NUCLEO-F401RE or NUCLEO-L476RG
 
+**Known issues and limitations**:
+
+This pack may not be compatible with ALL STM32 Nucleo boards.
+The STM32W0xx and STM32WL3xx families are not supported with this pack and some others may too.
+The examples delivered are tested only on NUCLEO-L476RG and NUCLEO-F401RE STM32 Nucleo boards
+
 The figure below shows the overall architecture.
 
 [![X-CUBE-TOF1 architecture diagram](_htmresc/xcubetof1-arch.png)]()
@@ -25,3 +31,4 @@ The figure below shows the overall architecture.
 - [STM32Cube](http://www.st.com/stm32cube)
 - [STM32 Nucleo boards](http://www.st.com/stm32nucleo)
 - [STM32 Nucleo expansion boards](http://www.st.com/x-nucleo)
+

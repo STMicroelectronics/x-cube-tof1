@@ -1,4 +1,40 @@
 ########################################################
+# Package VL53LX ReleaseNotes: 1.2.13 rev 2676
+########################################################
+
+-- Ewok LX Mass Market Bare Driver
+
+	Issues fixed in this version:
+	- Fix ticket #1309475 VL53L4CX dynamic XTALK function update
+	  Set smduge step limitation to its maximum
+	  rework the code to to fix no target was detected below 900mm
+
+Documentation .chm file updated
+
+########################################################
+# Package VL53LX ReleaseNotes: 1.2.12 rev 2668
+########################################################
+
+-- Ewok LX Mass Market Bare Driver
+
+	Issues fixed in this version:
+	- Fix ticket #1309475 VL53L4CX dynamic XTALK function update
+	  reverted unnecessary changes and refined tuning param
+
+Documentation .chm file updated
+
+########################################################
+# Package VL53LX ReleaseNotes: 1.2.11 rev 2660
+########################################################
+
+-- Ewok LX Mass Market Bare Driver
+
+	Issues fixed in this version:
+	- Fix ticket #1309475 VL53L4CX dynamic XTALK function update
+
+Documentation .chm file updated
+
+########################################################
 # Package VL53LX ReleaseNotes: 1.2.10 rev 2610
 ########################################################
 

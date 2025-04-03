@@ -271,7 +271,7 @@ VL53L4CD_Error VL53L4CD_StopRanging(
 {
 	VL53L4CD_Error status = VL53L4CD_ERROR_NONE;
 
-	status |= VL53L4CD_WrByte(dev, VL53L4CD_SYSTEM_START, 0x00);
+	status |= VL53L4CD_WrByte(dev, VL53L4CD_SYSTEM_START, 0x80);
 	return status;
 }
 
@@ -669,7 +669,7 @@ VL53L4CD_Error VL53L4CD_StartTemperatureUpdate(
 	status |= VL53L4CD_WrByte(dev,
 		VL53L4CD_VHV_CONFIG__TIMEOUT_MACROP_LOOP_BOUND, (uint8_t)0x81);
 	status |= VL53L4CD_WrByte(dev, 0x0B, (uint8_t)0x92);
-	status |= VL53L4CD_WrByte(dev, VL53L4CD_SYSTEM_START, (uint8_t)0x40);
+	status |= VL53L4CD_StartRanging(dev);
 
 	do{
 			status |= VL53L4CD_CheckForDataReady(dev, &tmp);
